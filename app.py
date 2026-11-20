@@ -156,7 +156,7 @@ def robots():
 @app.get("/sitemap.xml")
 def sitemap():
     base = SITE_URL or request.url_root.rstrip("/")
-    urls = ["", "#about", "#services", "#projects", "#contact"]
+    urls = [""]
     xml = '<?xml version="1.0" encoding="UTF-8"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
     xml += "".join(f"<url><loc>{base}/{part}</loc></url>" for part in urls)
     xml += "</urlset>"
