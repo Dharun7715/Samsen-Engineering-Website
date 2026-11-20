@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: samsen-engineering-website
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: true
