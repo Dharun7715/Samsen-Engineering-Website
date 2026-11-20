@@ -151,13 +151,13 @@ def delete_project(project_id):
 @app.get("/robots.txt")
 def robots():
     sitemap = f"{SITE_URL}/sitemap.xml" if SITE_URL else "/sitemap.xml"
-    return f"User-agent: *\\nAllow: /\\nDisallow: /admin\\nDisallow: /api/\\nSitemap: {sitemap}\\n", 200, {"Content-Type":"text/plain; charset=utf-8"}
+    return f"User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api/\nSitemap: {sitemap}\n", 200, {"Content-Type":"text/plain; charset=utf-8"}
 
 @app.get("/sitemap.xml")
 def sitemap():
     base = SITE_URL or request.url_root.rstrip("/")
     urls = [""]
-    xml = '<?xml version="1.0" encoding="UTF-8"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+    xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
     xml += "".join(f"<url><loc>{base}/{part}</loc></url>" for part in urls)
     xml += "</urlset>"
     return xml, 200, {"Content-Type":"application/xml; charset=utf-8"}
