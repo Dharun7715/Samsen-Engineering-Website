@@ -1,22 +1,30 @@
-# Samsen Engineering Contractor — Premium Website
+# Samsen Engineering Contractor — Website
 
-Responsive static website concept using the supplied Samsen logo and a navy / ruby / champagne visual identity.
+A responsive static business website for Samsen Engineering Contractor, based in East Tambaram, Chennai.
 
-## Preview locally
+## Included sections
+- Home / introduction
+- About Samsen
+- Services: Civil Construction, Interior Work, Layout Development, Real Estate & Property Marketing, and Buy & Sell Property
+- Project inspiration gallery
+- Contact and location
 
-Open `index.html` in a browser, or run `python -m http.server 8000` in this folder and visit http://localhost:8000.
+## Run locally
+Open `index.html` in a browser. No build step or package installation is required.
 
-## Before publishing
+## Deploy on Render
+A `render.yaml` Blueprint is included.
+1. Sign in to Render and choose **New + → Blueprint**.
+2. Connect the GitHub repository `Dharun7715/Samsen-Engineering-Website`.
+3. Render reads `render.yaml` and creates the static site.
+4. After deployment, open the generated `.onrender.com` URL and test the site.
 
-- Confirm the exact company service list and replace categories that do not match the business.
-- Replace illustrative project photos with approved Samsen project photographs and factual captions.
-- Confirm the official email, phone number, office address and enquiry details. The displayed email is a placeholder and must be verified.
-- WhatsApp integration has intentionally not been added, as requested.
-- Hero and project photos load from Unsplash and Google Fonts load from Google Fonts, so those elements need an internet connection.
+You can also create a **Static Site** manually with branch `main`, an empty build command, and publish directory `.`.
 
-## Files
+## Before public launch
+- Replace the illustrative gallery and hero photos with approved Samsen project photographs.
+- Add the confirmed business phone number, email address and exact office address.
+- Confirm the final service descriptions and spelling of the business name.
+- Check the map pin is accurate.
 
-- `index.html` — page structure and content
-- `styles.css` — responsive visual design
-- `script.js` — mobile navigation and current year
-- `assets/samsen-logo.png` — supplied company logo
+The website intentionally contains **no WhatsApp integration or WhatsApp links**.
