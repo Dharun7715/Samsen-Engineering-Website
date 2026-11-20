@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: samsen-engineering-web
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD_HASH
+        sync: false
+      - key: SITE_URL
+        sync: false
+      - key: DATA_DIR
+        value: /var/data
+    disk:
+      name: samsen-engineering-data
+      mountPath: /var/data
+      sizeGB: 1
