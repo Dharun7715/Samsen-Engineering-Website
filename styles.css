@@ -7,3 +7,23 @@
 .service-card:nth-child(5){border-top:1px solid rgba(255,255,255,.22)}
 .footer-wordmark{color:#fff;font-size:19px}
 @media(max-width:700px){.service-grid{grid-template-columns:1fr}.service-card:nth-child(2),.service-card:nth-child(3),.service-card:nth-child(4),.service-card:nth-child(5){border-left:0;border-top:1px solid rgba(255,255,255,.22);padding-left:0}}
+
+/* Stronger Samsen ruby-red brand accents */
+:root{--red:#a80b3c;--ruby:#a80b3c}
+.nav-cta{background:var(--ruby);color:#fff}
+.nav-cta:hover{background:#7f082e}
+.nav-links>a.active{color:var(--ruby);position:relative}
+.nav-links>a.active:after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:2px;background:var(--ruby)}
+.button-gold{background:var(--ruby);color:#fff}
+.button-gold span{color:#fff}
+.button-gold:hover{background:#7f082e}
+.service-icon{border-color:rgba(168,11,60,.8);color:#f0a5bc;background:rgba(168,11,60,.13)}
+.card-arrow{color:#f0a5bc}
+.under-link{border-color:var(--ruby)}
+.under-link span{color:var(--ruby)}
+.contact-panel{border-top-color:var(--ruby)}
+.panel-kicker,.project-overlay span{color:#c91d52}
+.eyebrow>span{background:var(--ruby)}
+.announcement-dot{background:var(--ruby)}
+.footer-wordmark{color:#fff}
+@media(max-width:700px){.nav-links>a.active:after{display:none}}
