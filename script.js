@@ -194,3 +194,17 @@ function escapeHtml(value) {
     image.src = url;
   });
 })();
+
+
+/* Cinematic Why Choose Us sequence */
+(() => {
+ const section=document.querySelector('.why-cinematic');
+ if(!section)return;
+ if(!('IntersectionObserver'in window)){section.classList.add('is-inview');return}
+ const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+   if(entry.isIntersecting){section.classList.add('is-inview');observer.disconnect()}
+  });
+ },{threshold:.18});
+ observer.observe(section);
+})();
