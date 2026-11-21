@@ -2231,3 +2231,87 @@ body.projects-page .portfolio-image-card:hover{
   border-color:#f5d99a!important;
   box-shadow:0 0 0 1px rgba(245,217,154,.38),0 0 16px rgba(245,217,154,.46),0 0 38px rgba(226,190,117,.28)!important;
 }
+
+
+/* REFINED SAMSEN GOLD FINISH — subtle, consistent glow across real page components */
+body.premium-site .service-card,
+body.premium-site .why-cinematic-card,
+body.premium-site .why-cinematic-image,
+body.premium-site .project-preview-grid article,
+body.premium-site .story-visual,
+body.premium-site .story-step,
+body.premium-site .values-strip > div,
+body.premium-site .contact-panel,
+body.premium-site .contact-method,
+body.premium-site .samsen-stat,
+body.projects-page .portfolio-image-grid [class*="portfolio-image-card"]{
+  border-color:rgba(216,184,117,.42)!important;
+  box-shadow:
+    0 0 0 1px rgba(216,184,117,.08),
+    0 5px 18px rgba(216,184,117,.075),
+    0 10px 26px rgba(0,0,0,.18)!important;
+  transition:border-color .28s ease,box-shadow .28s ease,transform .28s ease!important;
+}
+body.premium-site .service-card:hover,
+body.premium-site .why-cinematic-card:hover,
+body.premium-site .why-cinematic-image:hover,
+body.premium-site .project-preview-grid article:hover,
+body.premium-site .story-visual:hover,
+body.premium-site .story-step:hover,
+body.premium-site .values-strip > div:hover,
+body.premium-site .contact-panel:hover,
+body.premium-site .contact-method:hover,
+body.premium-site .samsen-stat:hover,
+body.projects-page .portfolio-image-grid [class*="portfolio-image-card"]:hover{
+  border-color:rgba(232,202,143,.72)!important;
+  box-shadow:
+    0 0 0 1px rgba(216,184,117,.14),
+    0 6px 20px rgba(216,184,117,.13),
+    0 12px 30px rgba(0,0,0,.22)!important;
+}
+body.premium-site .button,
+body.premium-site .nav-cta,
+body.premium-site .gallery-filter,
+body.premium-site .slider-arrows button,
+body.premium-site .contact-call,
+body.premium-site .contact-email-link{
+  box-shadow:0 3px 12px rgba(216,184,117,.10)!important;
+}
+body.premium-site .button:hover,
+body.premium-site .nav-cta:hover,
+body.premium-site .gallery-filter:hover,
+body.premium-site .slider-arrows button:hover,
+body.premium-site .contact-call:hover,
+body.premium-site .contact-email-link:hover{
+  box-shadow:0 4px 16px rgba(216,184,117,.18)!important;
+}
+body.premium-site .service-no,
+body.premium-site .story-kicker,
+body.premium-site .samsen-stat-icon,
+body.premium-site .why-cinematic-icon,
+body.premium-site .eyebrow>span{
+  filter:drop-shadow(0 0 3px rgba(216,184,117,.28))!important;
+}
+body.premium-site .section-heading,
+body.premium-site .story-heading,
+body.premium-site .why-cinematic-heading{
+  text-shadow:0 1px 12px rgba(216,184,117,.055);
+}
+body.premium-site .footer-grid>div,
+body.premium-site .footer-column{
+  border-color:rgba(216,184,117,.16);
+}
+body.projects-page .portfolio-image-grid [class*="portfolio-image-card"]{
+  border:1px solid rgba(216,184,117,.42)!important;
+  border-radius:14px;
+  overflow:hidden;
+}
+@media(prefers-reduced-motion:reduce){
+ body.premium-site .service-card,body.premium-site .why-cinematic-card,
+ body.premium-site .why-cinematic-image,body.premium-site .project-preview-grid article,
+ body.premium-site .story-step,body.premium-site .values-strip>div,
+ body.premium-site .contact-panel,body.premium-site .samsen-stat,
+ body.projects-page .portfolio-image-grid [class*="portfolio-image-card"]{
+  transition:none!important;
+ }
+}
