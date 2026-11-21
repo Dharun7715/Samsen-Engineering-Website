@@ -2097,3 +2097,36 @@ img{height:auto}
   *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
 }
 
+/* SAMSEN TYPOGRAPHY TONE — soft champagne gold, consistent across the site */
+:root{--samsen-soft-gold:#e3c98f;--samsen-soft-gold-light:#ead7aa}
+body.premium-site .why-cinematic-heading h2 em,
+body.premium-site .why-cinematic-copy h3 em,
+body.premium-site .why-cinematic-icon,
+body.premium-site .why-cinematic-heading .eyebrow,
+body.premium-site .why-divider,
+body.premium-site .why-cinematic-image figcaption,
+body.premium-site .why-cinematic-copy h3{
+ color:var(--samsen-soft-gold-light)!important;
+}
+body.premium-site .why-divider span{background:linear-gradient(90deg,transparent,var(--samsen-soft-gold))!important}
+body.premium-site .why-cinematic-icon{border-color:rgba(227,201,143,.72)!important;background:rgba(227,201,143,.07)!important}
+body.premium-site .why-cinematic-card,
+body.premium-site .why-cinematic-image{border-color:rgba(227,201,143,.62)!important}
+body.premium-site .eyebrow,
+body.premium-site .section-heading h2 em,
+body.premium-site .intro h2 em,
+body.premium-site .story-heading h2 em,
+body.premium-site .contact h2 em,
+body.premium-site .statement h2 em,
+body.premium-site .service-no,
+body.premium-site .service-link,
+body.premium-site .story-kicker,
+body.premium-site .samsen-stat-icon,
+body.premium-site .samsen-stat-number,
+body.premium-site .back-top,
+body.premium-site .footer-column h3,
+body.premium-site .portfolio-heading h2 em,
+body.premium-site .projects-hero h1 em,
+body.premium-site .portfolio-image-card figcaption span{
+ color:var(--samsen-soft-gold)!important;
+}
