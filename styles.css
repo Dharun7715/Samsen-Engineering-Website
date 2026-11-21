@@ -1202,3 +1202,61 @@ a,button,.service-card,.portfolio-image-card{transition-timing-function:cubic-be
 .premium-site .back-top:hover{
  color:#d7a0a8!important;
 }
+
+
+/* Correct mobile service-card inner spacing: content must sit inside the gold frame */
+@media(max-width:700px){
+  .premium-site .services .service-grid{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:18px!important;
+    width:100%!important;
+    min-width:0!important;
+  }
+  .premium-site .services .service-grid>.service-card,
+  .premium-site .services .service-grid>.service-card:nth-child(n){
+    display:block!important;
+    box-sizing:border-box!important;
+    width:100%!important;
+    min-width:0!important;
+    padding:24px 22px 62px!important;
+    margin:0!important;
+    border:1px solid rgba(226,190,117,.62)!important;
+    border-radius:15px!important;
+    overflow:hidden!important;
+  }
+  .premium-site .services .service-grid>.service-card>.service-no,
+  .premium-site .services .service-grid>.service-card>h3,
+  .premium-site .services .service-grid>.service-card>p{
+    display:block!important;
+    max-width:100%!important;
+    margin-left:0!important;
+    margin-right:0!important;
+  }
+  .premium-site .services .service-grid>.service-card>.service-photo{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    height:195px!important;
+    margin:18px 0 20px!important;
+    border-radius:9px!important;
+    object-fit:cover!important;
+  }
+  .premium-site .services .service-grid>.service-card>.service-link{
+    left:22px!important;
+    bottom:22px!important;
+    right:22px!important;
+  }
+  .premium-site .services .service-grid>.service-card:before{
+    inset:0!important;
+    border-radius:15px!important;
+    pointer-events:none!important;
+  }
+}
+@media(max-width:390px){
+ .premium-site .services .service-grid>.service-card,
+ .premium-site .services .service-grid>.service-card:nth-child(n){
+   padding:22px 20px 60px!important;
+ }
+ .premium-site .services .service-grid>.service-card>.service-link{left:20px!important}
+}
