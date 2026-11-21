@@ -1558,3 +1558,14 @@ a,button,.service-card,.portfolio-image-card{transition-timing-function:cubic-be
  .projects-page .footer-bottom{align-items:flex-start;flex-direction:column}
 }
 @media(prefers-reduced-motion:reduce){.hero-video{display:none}.hero-slider.has-hero-video .slide:before{opacity:1!important}.gallery-filter,.portfolio-lightbox{transition:none}}
+
+
+/* Unique cinematic footage for each hero slide */
+.hero-slider .slide-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:0;pointer-events:none;transition:opacity .9s ease}
+.hero-slider .slide:before{z-index:-3}
+.hero-slider .slide-shade{z-index:-1!important}
+.hero-slider .slide.active .slide-video{opacity:1}
+.hero-slider .slide.active:before{opacity:0!important}
+.hero-slider .slide:not(.active) .slide-video{opacity:0}
+@media(max-width:700px){.hero-slider .slide-video{object-position:center center}.hero-slider .slide-shade{background:linear-gradient(180deg,rgba(3,12,29,.82),rgba(3,12,29,.52) 55%,rgba(3,12,29,.72))!important}}
+@media(prefers-reduced-motion:reduce){.hero-slider .slide-video{display:none!important}.hero-slider .slide:before{opacity:1!important}}
