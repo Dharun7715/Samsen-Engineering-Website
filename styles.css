@@ -2070,3 +2070,31 @@ body.premium-site .why-cinematic-copy p{
   text-shadow:none!important;
 }
 
+/* FINAL UI + PERFORMANCE POLISH — preserve the Samsen navy and gold design */
+html{scroll-behavior:smooth}
+img{height:auto}
+img[loading="lazy"]{content-visibility:auto}
+.site-header,
+.slide-caption,
+.slider-arrows button,
+.why-cinematic-card,
+.premium-site .contact-panel,
+.premium-site .nav-links{
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+}
+@media(max-width:900px){
+  .site-header{box-shadow:0 4px 16px rgba(0,0,0,.14)!important}
+  .why-cinematic-card{transition:opacity .45s ease,transform .45s ease,border-color .2s ease!important}
+  .why-cinematic-image{transition:opacity .5s ease,transform .5s ease!important}
+}
+@media(max-width:700px){
+  .slide:before{transition:transform 5s ease!important}
+  .project img,.service-photo{transition:transform .35s ease!important}
+  .floating-call{box-shadow:0 5px 16px rgba(0,0,0,.18)!important}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto!important}
+  *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+}
+
