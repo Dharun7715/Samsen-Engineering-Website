@@ -971,3 +971,23 @@ a,button,.service-card,.portfolio-image-card{transition-timing-function:cubic-be
 .premium-site .project-contact-strip h2{color:#fff}.premium-site .project-contact-strip h2 em{color:#e4c47f}
 .premium-site .footer-main p{color:#c1ccdc}.premium-site ::selection{background:#d8b875;color:#07142b}
 @media(max-width:700px){.premium-site .site-header{background:rgba(5,16,35,.98)}.premium-site .nav-links{background:#07142b;border:1px solid rgba(216,184,117,.24);box-shadow:0 18px 35px rgba(0,0,0,.35)}.premium-site .nav-links>a:not(.nav-cta){color:#e2e8f1;border-color:rgba(216,184,117,.14)}.premium-site .wrap{width:min(100% - 36px,1180px)}}
+
+
+/* Reference-matched white and gold typography for the Why Choose Us section */
+.why-cinematic-heading h2{color:#fff!important}
+.why-cinematic-heading h2 em{color:#f0b735!important}
+.why-cinematic-heading>p:last-child{color:#f4f5f8!important}
+.why-cinematic-copy h3{color:#fff!important;font-family:Georgia,'Times New Roman',serif!important;font-size:clamp(19px,1.7vw,25px)!important;font-weight:700!important;letter-spacing:-.025em}
+.why-cinematic-copy h3 em{color:#f0b735!important;font-style:normal!important}
+.why-cinematic-copy p{color:#f1f3f7!important}
+.why-cinematic-card{background:linear-gradient(125deg,rgba(4,18,39,.82),rgba(11,31,56,.62))!important;border:1px solid rgba(190,207,228,.22)!important;border-radius:21px!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 18px 48px rgba(0,0,0,.24)!important}
+.why-cinematic-card:after{content:"";position:absolute;left:12%;right:12%;bottom:-1px;height:2px;background:linear-gradient(90deg,transparent,#f0b735,transparent);filter:drop-shadow(0 0 5px #f0b735);opacity:.9}
+.why-cinematic-card{position:relative}
+.why-cinematic-icon{border:2px solid #dcae43!important;border-radius:12px!important;color:#f0b735!important;background:linear-gradient(145deg,rgba(240,183,53,.16),rgba(240,183,53,.035))!important;box-shadow:0 0 16px rgba(240,183,53,.12),inset 0 0 12px rgba(240,183,53,.08)!important}
+.why-cinematic-copy h3:after{background:#f0b735!important;width:44px!important;height:3px!important}
+.why-cinematic-image{border:2px solid rgba(226,174,65,.85)!important;border-radius:17px!important;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 18px 50px rgba(0,0,0,.38),0 0 22px rgba(240,183,53,.12)!important}
+.why-cinematic-image figcaption{color:#f0c45f!important}
+.why-cinematic-heading .eyebrow{color:#e9c36f!important}
+.why-divider{color:#f0b735!important}
+.why-divider span{background:linear-gradient(90deg,transparent,#f0b735)!important}
+@media(max-width:700px){.why-cinematic-copy h3{font-size:20px!important}}
