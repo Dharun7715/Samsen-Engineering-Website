@@ -754,3 +754,43 @@ a,button,.service-card,.portfolio-image-card{transition-timing-function:cubic-be
 @media(max-width:700px){.proof-strip{padding:75px 0 65px}.proof-heading h2,.showcase-copy h2{font-size:40px}.proof-grid{grid-template-columns:1fr;gap:12px;margin-top:28px}.proof-card{min-height:145px;padding:22px 24px}.proof-number{font-size:48px}.proof-disclaimer{padding:0 24px}.showcase-3d{padding:76px 0}.model-stage{height:410px;margin:0 -8px}.building-model{transform:scale(.82) rotateX(-13deg) rotateY(-32deg)}.model-tag-one{left:0}.model-tag-two{right:0}.model-controls{bottom:2px}}
 @media(max-width:390px){.model-stage{height:360px}.building-model{transform:scale(.72) rotateX(-13deg) rotateY(-32deg)}}
 @media(prefers-reduced-motion:reduce){.hero-slider .slide:before,.hero-slider .slide-content{animation:none!important}.reveal{opacity:1;transform:none;transition:none}.proof-card,.building-model{transition:none!important}}
+
+
+/* Final mobile hero composition: copy stays above the photograph without overlap */
+@media(max-width:700px){
+  .hero-slider{height:auto!important;min-height:960px!important;max-height:none!important}
+  .hero-slider .slide{height:960px!important;min-height:960px!important}
+  .hero-slider .slide:before{
+    inset:0!important;
+    background-size:100% auto!important;
+    background-position:center bottom 108px!important;
+    background-repeat:no-repeat!important;
+    transform:none!important;
+  }
+  .hero-slider .slide-shade{
+    background:linear-gradient(180deg,
+      rgba(3,12,29,.99) 0%,
+      rgba(3,12,29,.98) 38%,
+      rgba(3,12,29,.90) 49%,
+      rgba(3,12,29,.25) 67%,
+      rgba(3,12,29,0) 82%)!important;
+  }
+  .hero-slider .slide-content{
+    position:relative!important;
+    z-index:3!important;
+    padding-top:48px!important;
+    padding-bottom:500px!important;
+  }
+  .hero-slider .slide h1{font-size:clamp(39px,9.8vw,53px)!important;line-height:1.04}
+  .hero-slider .slide-copy{max-width:330px;margin-top:15px;margin-bottom:20px}
+  .hero-slider .hero-actions{gap:13px}
+  .hero-slider .slide-caption{bottom:138px!important}
+  .hero-slider .hero-controls{bottom:48px!important}
+  .hero-slider .hero-bottom{bottom:14px!important}
+}
+@media(max-width:390px){
+  .hero-slider .slide,.hero-slider{min-height:940px!important}
+  .hero-slider .slide{height:940px!important}
+  .hero-slider .slide-content{padding-top:40px!important;padding-bottom:490px!important}
+  .hero-slider .slide h1{font-size:39px!important}
+}
