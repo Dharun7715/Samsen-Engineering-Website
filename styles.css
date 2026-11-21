@@ -1511,3 +1511,50 @@ a,button,.service-card,.portfolio-image-card{transition-timing-function:cubic-be
   body.premium-site .hero-slider .slide h1{font-size:39px!important}
   body.premium-site .hero-slider .slide-caption{right:16px!important}
 }
+
+
+/* 2026 premium upgrades: cinematic video hero, filterable portfolio, unified footer */
+.hero-slider{isolation:isolate}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0;transition:opacity 1s ease;pointer-events:none}
+.hero-slider.has-hero-video .hero-video{opacity:1}
+.hero-slider.has-hero-video .slide:before{opacity:0!important}
+.hero-slider .slide{background:transparent}
+.hero-slider .slide-shade{z-index:0!important;background:linear-gradient(90deg,rgba(3,12,29,.88),rgba(3,12,29,.54) 52%,rgba(3,12,29,.2)),linear-gradient(0deg,rgba(3,12,29,.62),transparent 60%)}
+.hero-slider .slide-content{z-index:2}
+.hero-slider .slide-caption,.hero-slider .hero-controls,.hero-slider .hero-bottom{z-index:3}
+.portfolio-filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 28px}
+.gallery-filter{appearance:none;border:1px solid rgba(216,184,117,.38);border-radius:999px;padding:10px 16px;background:rgba(255,255,255,.04);color:#dbe3ef;font:600 10px 'Manrope',sans-serif;letter-spacing:.04em;cursor:pointer;transition:background .25s,border-color .25s,color .25s,box-shadow .25s}
+.gallery-filter:hover,.gallery-filter.active{background:linear-gradient(135deg,#e7cb8d,#bd9857);border-color:#f2d79e;color:#07142b;box-shadow:0 6px 20px rgba(216,184,117,.18)}
+.portfolio-image-card{cursor:zoom-in;outline:none}
+.portfolio-image-card:focus-visible{outline:2px solid #e7cb8d;outline-offset:4px}
+.portfolio-image-card[hidden]{display:none!important}
+.portfolio-lightbox{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;gap:clamp(10px,3vw,32px);padding:60px 24px 30px;background:rgba(2,8,19,.96);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+.portfolio-lightbox.open{opacity:1;visibility:visible}
+.portfolio-lightbox figure{margin:0;max-width:min(100%,1100px);max-height:100%;display:flex;flex-direction:column;align-items:center;gap:12px}
+.portfolio-lightbox figure img{display:block;max-width:100%;max-height:calc(100svh - 135px);width:auto;height:auto;object-fit:contain;border:1px solid rgba(216,184,117,.55);border-radius:10px;box-shadow:0 18px 70px rgba(0,0,0,.5)}
+.portfolio-lightbox figcaption{color:#e9d29e;text-align:center;font:600 12px 'Manrope',sans-serif;letter-spacing:.08em}
+.lightbox-close,.lightbox-prev,.lightbox-next{border:1px solid rgba(216,184,117,.5);background:rgba(9,25,48,.9);color:#f0d79f;display:grid;place-items:center;cursor:pointer}
+.lightbox-close{position:absolute;right:22px;top:18px;width:42px;height:42px;border-radius:50%;font-size:28px}
+.lightbox-prev,.lightbox-next{width:44px;height:44px;border-radius:50%;font-size:28px;flex:0 0 auto}
+.lightbox-close:hover,.lightbox-prev:hover,.lightbox-next:hover{background:#e7cb8d;color:#07142b}
+.portfolio-lightbox[aria-hidden="true"]{pointer-events:none}
+.projects-page .premium-footer{margin-top:0}
+.projects-page .footer-grid{padding-top:0}
+.projects-page .footer-brand-block .footer-brand{background:#fff}
+.projects-page .footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+@media(max-width:700px){
+ .hero-video{object-position:center center}
+ .hero-slider.has-hero-video .slide:before{opacity:0!important}
+ .hero-slider .slide-shade{background:linear-gradient(180deg,rgba(3,12,29,.78),rgba(3,12,29,.45) 55%,rgba(3,12,29,.76))!important}
+ .portfolio-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:20px}
+ .gallery-filter{padding:11px 8px;font-size:9px;white-space:normal}
+ .portfolio-lightbox{padding:65px 12px 24px;gap:7px}
+ .portfolio-lightbox figure{min-width:0;flex:1}
+ .portfolio-lightbox figure img{max-width:100%;max-height:72svh}
+ .lightbox-prev,.lightbox-next{width:34px;height:34px;font-size:22px}
+ .lightbox-close{right:12px;top:12px}
+ .projects-page .footer-grid{grid-template-columns:1fr!important;gap:28px!important}
+ .projects-page .footer-brand-block .footer-brand img{width:190px}
+ .projects-page .footer-bottom{align-items:flex-start;flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){.hero-video{display:none}.hero-slider.has-hero-video .slide:before{opacity:1!important}.gallery-filter,.portfolio-lightbox{transition:none}}
