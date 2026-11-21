@@ -991,3 +991,79 @@ a,button,.service-card,.portfolio-image-card{transition-timing-function:cubic-be
 .why-divider{color:#f0b735!important}
 .why-divider span{background:linear-gradient(90deg,transparent,#f0b735)!important}
 @media(max-width:700px){.why-cinematic-copy h3{font-size:20px!important}}
+
+
+/* Gold-highlighted typography and illuminated card edges to match the reference */
+.premium-site h1,.premium-site h2,.premium-site h3,.premium-site .portfolio-heading h2,.premium-site .section-heading h2{
+ color:#f7f8fb;
+}
+.premium-site h1 em,.premium-site h2 em,.premium-site h3 em,
+.premium-site .section-heading h2 em,.premium-site .intro h2 em,
+.premium-site .story-heading h2 em,.premium-site .contact h2 em,
+.premium-site .proof-heading h2 em,.premium-site .portfolio-heading h2 em,
+.premium-site .projects-hero h1 em,.premium-site .statement h2 em{
+ color:#f0b735!important;
+ text-shadow:0 0 18px rgba(240,183,53,.16);
+}
+.premium-site .section-heading h2,.premium-site .intro h2,
+.premium-site .story-heading h2,.premium-site .contact h2,
+.premium-site .proof-heading h2,.premium-site .portfolio-heading h2,
+.premium-site .projects-hero h1,.premium-site .statement h2{
+ text-shadow:0 3px 24px rgba(0,0,0,.22);
+}
+.premium-site .service-card,.premium-site .proof-card,.premium-site .contact-panel,
+.premium-site .project-preview-grid article,.premium-site .portfolio-image-card,
+.premium-site .why-cinematic-card{
+ position:relative;
+ border:1px solid rgba(220,177,82,.42)!important;
+ box-shadow:0 12px 35px rgba(0,0,0,.24),inset 0 0 22px rgba(220,177,82,.035),0 0 12px rgba(220,177,82,.07);
+}
+.premium-site .service-card:before,.premium-site .proof-card:before,
+.premium-site .contact-panel:before,.premium-site .project-preview-grid article:before,
+.premium-site .why-cinematic-card:before{
+ content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;
+ background:linear-gradient(115deg,rgba(220,177,82,.08),rgba(255,221,145,.85) 28%,rgba(220,177,82,.12) 53%,rgba(255,221,145,.72) 78%,rgba(220,177,82,.08));
+ -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+ -webkit-mask-composite:xor;mask-composite:exclude;
+ opacity:.72;pointer-events:none;transition:opacity .35s,filter .35s;
+}
+.premium-site .service-card:hover,.premium-site .proof-card:hover,
+.premium-site .project-preview-grid article:hover{
+ border-color:rgba(255,218,137,.9)!important;
+ box-shadow:0 18px 45px rgba(0,0,0,.32),0 0 23px rgba(230,183,83,.2),inset 0 0 20px rgba(230,183,83,.06);
+}
+.premium-site .service-card:hover:before,.premium-site .proof-card:hover:before,
+.premium-site .project-preview-grid article:hover:before{opacity:1;filter:drop-shadow(0 0 5px rgba(255,205,103,.65))}
+.premium-site .why-cinematic-card{
+ border-radius:20px!important;
+ background:linear-gradient(145deg,rgba(11,29,54,.94),rgba(5,17,35,.82))!important;
+ box-shadow:0 16px 40px rgba(0,0,0,.3),inset 0 0 24px rgba(220,177,82,.045),0 0 12px rgba(220,177,82,.08)!important;
+}
+.premium-site .why-cinematic-card:before{opacity:.95;filter:drop-shadow(0 0 4px rgba(255,198,91,.45))}
+.premium-site .why-cinematic-card:after{
+ content:"";position:absolute;left:18%;right:18%;bottom:-2px;height:3px;border-radius:50%;
+ background:linear-gradient(90deg,transparent,#f5c45d 30%,#fff0c4 50%,#f5c45d 70%,transparent);
+ box-shadow:0 0 9px 2px rgba(255,190,72,.72),0 0 22px 4px rgba(255,177,54,.35);
+ opacity:.92;pointer-events:none;
+}
+.premium-site .why-cinematic-copy h3{color:#fff!important}
+.premium-site .why-cinematic-copy h3 em{color:#f0b735!important}
+.premium-site .service-card h3,.premium-site .project-preview-grid h3,
+.premium-site .story-step h3,.premium-site .contact-panel h3{
+ color:#fff!important;
+}
+.premium-site .service-card h3:after,.premium-site .project-preview-grid h3:after{
+ content:"";display:block;width:34px;height:2px;margin-top:10px;
+ background:linear-gradient(90deg,#f0b735,rgba(240,183,53,.12));
+ box-shadow:0 0 8px rgba(240,183,53,.42);
+}
+.premium-site .section-heading .section-note,.premium-site .portfolio-heading p,
+.premium-site .why-cinematic-heading>p:last-child{color:#dce3ed}
+@media(max-width:700px){
+ .premium-site .why-cinematic-card:after{left:24%;right:24%}
+ .premium-site .service-card,.premium-site .proof-card,.premium-site .contact-panel{box-shadow:0 10px 28px rgba(0,0,0,.25),inset 0 0 18px rgba(220,177,82,.035)}
+}
+@media(prefers-reduced-motion:reduce){
+ .premium-site .service-card:before,.premium-site .proof-card:before,
+ .premium-site .contact-panel:before,.premium-site .project-preview-grid article:before{transition:none}
+}
