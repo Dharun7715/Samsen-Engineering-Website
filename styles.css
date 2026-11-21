@@ -546,3 +546,12 @@ body{background:#f4f3ef}
  .section-pad{padding:88px 0}
 }
 @media(prefers-reduced-motion:reduce){.slide:before,.slide,.service-card{transition:none!important}}
+
+/* Journey section: retain the visual and four details, but remove sticky/scroll effects */
+.story-visual{position:relative!important;top:auto!important;height:520px;min-height:0;align-self:start}
+.story-steps{display:block}
+.story-step{min-height:0;min-height:unset;opacity:1!important;align-content:start;padding:34px 0}
+.story-step.active{opacity:1}
+.story-visual img{transition:none!important;transform:none!important}
+.story-visual.is-changing img{opacity:1;transform:none}
+@media(max-width:700px){.story-visual{height:300px;position:relative!important;top:auto!important}.story-step{min-height:0;padding:25px 0}}
