@@ -345,3 +345,17 @@ button{font:inherit}
  .premium-footer{padding-top:55px}
  .premium-footer .footer-bottom{flex-direction:column;align-items:flex-start}
 }
+
+
+/* Header colour alignment: match the Samsen navy identity */
+.site-header{background:#0b1d3b!important;box-shadow:0 5px 24px rgba(3,12,29,.22);border-bottom:1px solid rgba(255,255,255,.12)}
+.nav-links{color:#d8e0ed}
+.nav-links>a:not(.nav-cta):hover,.nav-links>a.active{color:#e2c58f}
+.nav-links>a:not(.nav-cta){color:#d8e0ed}
+.nav-links>a:not(.nav-cta):hover,.nav-links>a.active{color:#e2c58f}
+.menu-toggle span{background:#fff}
+@media(max-width:700px){
+ .nav-links{background:#0b1d3b;box-shadow:0 15px 20px rgba(3,12,29,.25)}
+ .nav-links>a:not(.nav-cta){color:#e1e7f0;border-bottom-color:rgba(255,255,255,.14)}
+ .nav-links>a:not(.nav-cta):hover,.nav-links>a.active{color:#e2c58f}
+}
