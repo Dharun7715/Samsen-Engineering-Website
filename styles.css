@@ -2036,3 +2036,37 @@ button,a{-webkit-tap-highlight-color:transparent}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+/* WHY CHOOSE US — plain gold borders only; remove all glow effects */
+body.premium-site .why-cinematic-card,
+body.premium-site .why-cinematic-card:hover{
+  border:1px solid rgba(216,184,117,.72)!important;
+  box-shadow:none!important;
+  filter:none!important;
+}
+body.premium-site .why-cinematic-card:before,
+body.premium-site .why-cinematic-card:after{
+  content:none!important;
+  display:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+}
+body.premium-site .why-cinematic-icon,
+body.premium-site .why-cinematic-icon:hover{
+  border:1px solid rgba(216,184,117,.78)!important;
+  box-shadow:none!important;
+  filter:none!important;
+  text-shadow:none!important;
+}
+body.premium-site .why-cinematic-image,
+body.premium-site .why-cinematic-image:hover{
+  border:1px solid rgba(216,184,117,.72)!important;
+  box-shadow:none!important;
+  filter:none!important;
+}
+body.premium-site .why-cinematic-heading h2,
+body.premium-site .why-cinematic-copy h3,
+body.premium-site .why-cinematic-copy p{
+  text-shadow:none!important;
+}
+
