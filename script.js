@@ -210,19 +210,8 @@ function escapeHtml(value) {
 })();
 
 
-/* Samsen cinematic video hero — keep image carousel as a graceful fallback */
-(() => {
- const hero=document.querySelector('.hero-slider');
- const video=hero?.querySelector('.hero-video');
- if(!hero||!video)return;
- const enable=()=>hero.classList.add('has-hero-video');
- const disable=()=>hero.classList.remove('has-hero-video');
- video.addEventListener('playing',enable,{once:true});
- video.addEventListener('error',disable);
- video.addEventListener('stalled',()=>{if(video.readyState<2)disable()});
- const attempt=video.play();
- if(attempt&&typeof attempt.catch==='function')attempt.catch(disable);
-})();
+/* Play only the video belonging to the active hero slide; pause inactive footage. */
+(()=>{const hero=document.querySelector('.hero-slider');if(!hero)return;const slides=[...hero.querySelectorAll('.slide')];const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;const sync=()=>{const active=slides.find(s=>s.classList.contains('active'));slides.forEach(s=>{const v=s.querySelector('.slide-video');if(!v)return;if(s===active&&!reduced){const p=v.play();if(p&&p.catch)p.catch(()=>{v.style.display='none'});}else v.pause();});};const obs=new MutationObserver(sync);slides.forEach(s=>obs.observe(s,{attributes:true,attributeFilter:['class']}));document.addEventListener('visibilitychange',()=>{if(document.hidden)slides.forEach(s=>s.querySelector('.slide-video')?.pause());else sync()});sync()})();
 
 /* Accessible portfolio filters and image lightbox */
 (() => {
