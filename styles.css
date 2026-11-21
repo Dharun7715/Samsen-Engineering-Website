@@ -2073,7 +2073,6 @@ body.premium-site .why-cinematic-copy p{
 /* FINAL UI + PERFORMANCE POLISH — preserve the Samsen navy and gold design */
 html{scroll-behavior:smooth}
 img{height:auto}
-img[loading="lazy"]{content-visibility:auto}
 .site-header,
 .slide-caption,
 .slider-arrows button,
