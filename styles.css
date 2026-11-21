@@ -1165,3 +1165,40 @@ a,button,.service-card,.portfolio-image-card{transition-timing-function:cubic-be
  box-shadow:0 0 18px rgba(160,0,58,.22),inset 0 0 15px rgba(160,0,58,.12)
 }
 .premium-site .back-top:hover{color:#e6a6bd!important}
+
+
+/* Refined premium wine-red accent — softer than the logo's bright burgundy */
+.premium-site{
+ --brand-red:#8f3545;
+ --brand-red-deep:#702536;
+ --brand-red-soft:#b66a75;
+}
+.premium-site .topline-dot,
+.premium-site .service-no:before,
+.premium-site .contact-method>span:before,
+.premium-site .footer-location:before{
+ background:#8f3545!important;
+ box-shadow:0 0 8px rgba(143,53,69,.35)!important;
+}
+.premium-site .eyebrow>span{
+ background:linear-gradient(90deg,#8f3545,#d8b875)!important;
+}
+.premium-site .service-card:hover{
+ border-color:rgba(143,53,69,.58)!important;
+}
+.premium-site .service-card:hover:before{
+ background:linear-gradient(115deg,rgba(143,53,69,.12),rgba(255,221,145,.8) 28%,rgba(143,53,69,.24) 53%,rgba(255,221,145,.72) 78%,rgba(143,53,69,.12))!important;
+}
+.premium-site .why-cinematic-icon{
+ border-color:rgba(143,53,69,.58)!important;
+}
+.premium-site .why-cinematic-card:hover .why-cinematic-icon{
+ border-color:rgba(182,106,117,.78)!important;
+ box-shadow:0 0 18px rgba(143,53,69,.2),inset 0 0 15px rgba(143,53,69,.1)!important;
+}
+.premium-site .service-link:hover,
+.premium-site .text-link:hover,
+.premium-site .footer-column>a:hover,
+.premium-site .back-top:hover{
+ color:#d7a0a8!important;
+}
