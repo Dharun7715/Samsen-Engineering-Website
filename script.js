@@ -190,3 +190,25 @@ function escapeHtml(value) {
   }, {rootMargin:'-35% 0px -35% 0px',threshold:[0,.15,.35,.6]});
   steps.forEach(step => observer.observe(step));
 })();
+
+
+/* Keep section navigation clean: scroll without adding #anchors to the address bar. */
+(() => {
+  const cleanAddress = () => {
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+  };
+  cleanAddress();
+  window.addEventListener('hashchange', cleanAddress);
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link) return;
+    const id = decodeURIComponent(link.getAttribute('href').slice(1));
+    const target = document.getElementById(id);
+    if (!target) return;
+    event.preventDefault();
+    target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  });
+})();
