@@ -1890,3 +1890,45 @@ body.premium-site .samsen-stat-label{
  body.premium-site .samsen-stat-icon{width:31px!important;height:31px!important}
  body.premium-site .samsen-stat-number{font-size:40px!important}
 }
+
+
+/* Correct Services palette: replace white cards with Samsen deep navy */
+body.premium-site section#services,
+body.premium-site .services{
+  background:linear-gradient(180deg,#07152d 0%,#0b1d39 52%,#050f21 100%)!important;
+  color:#f7f8fc!important;
+}
+body.premium-site section#services .section-heading h2,
+body.premium-site section#services .section-heading h2 em{color:#fff!important}
+body.premium-site section#services .section-heading h2 em{color:#d8b875!important}
+body.premium-site section#services .section-note{color:#c3ccdc!important}
+body.premium-site section#services .service-grid{
+  border-top:1px solid rgba(216,184,117,.28)!important;
+  border-bottom:1px solid rgba(216,184,117,.28)!important;
+}
+body.premium-site section#services .service-grid article.service-card,
+body.premium-site section#services .service-grid article.service-card:nth-child(n){
+  background:linear-gradient(155deg,#102544 0%,#0a1a33 100%)!important;
+  color:#f7f8fc!important;
+  border:1px solid rgba(216,184,117,.34)!important;
+  box-shadow:0 16px 38px rgba(0,0,0,.18)!important;
+}
+body.premium-site section#services .service-grid article.service-card h3{color:#fff!important}
+body.premium-site section#services .service-grid article.service-card p{color:#c3ccdc!important}
+body.premium-site section#services .service-grid article.service-card .service-no{color:#e0c17f!important}
+body.premium-site section#services .service-grid article.service-card .service-link{color:#e4c782!important}
+body.premium-site section#services .service-grid article.service-card:before{
+  background:linear-gradient(115deg,rgba(216,184,117,.08),rgba(216,184,117,.42) 30%,rgba(216,184,117,.12) 55%,rgba(216,184,117,.35) 78%,rgba(216,184,117,.08))!important;
+}
+body.premium-site section#services .service-grid article.service-card:hover{
+  background:linear-gradient(155deg,#142d50 0%,#0c203c 100%)!important;
+  border-color:rgba(216,184,117,.72)!important;
+  box-shadow:0 22px 48px rgba(0,0,0,.25),0 0 22px rgba(216,184,117,.08)!important;
+}
+@media(max-width:700px){
+  body.premium-site section#services .service-grid article.service-card,
+  body.premium-site section#services .service-grid article.service-card:nth-child(n){
+    background:linear-gradient(155deg,#102544 0%,#0a1a33 100%)!important;
+    border:1px solid rgba(216,184,117,.4)!important;
+  }
+}
