@@ -1,24 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="logoTitle logoDesc">
-<title id="logoTitle">Samsen Engineering Contractor</title>
-<desc id="logoDesc">Navy and burgundy nine-square emblem with a single golden centre square, beside the white Samsen Engineering Contractor wordmark.</desc>
-<rect width="960" height="300" fill="#102b5c"/>
-<g transform="translate(18 18)">
-  <rect x="0" y="0" width="264" height="264" rx="13" fill="#ffffff"/>
-  <g transform="translate(9 9)">
-    <rect x="0" y="0" width="78" height="78" rx="9" fill="#173a78"/>
-    <rect x="81" y="0" width="78" height="78" rx="9" fill="#963c55"/>
-    <rect x="162" y="0" width="78" height="78" rx="9" fill="#963c55"/>
-    <rect x="0" y="81" width="78" height="78" rx="9" fill="#173a78"/>
-    <rect x="81" y="81" width="78" height="78" rx="9" fill="#f3c928"/>
-    <rect x="162" y="81" width="78" height="78" rx="9" fill="#173a78"/>
-    <rect x="0" y="162" width="78" height="78" rx="9" fill="#963c55"/>
-    <rect x="81" y="162" width="78" height="78" rx="9" fill="#963c55"/>
-    <rect x="162" y="162" width="78" height="78" rx="9" fill="#173a78"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300" role="img" aria-labelledby="title desc">
+<title id="title">Samsen Engineering Contractor</title>
+<desc id="desc">Original Samsen logo: three by three rounded square emblem, with only the centre tile yellow, beside the white company name on a navy blue background.</desc>
+<rect width="1000" height="300" fill="#08265a"/>
+<rect x="0" y="0" width="292" height="300" fill="#ffffff"/>
+<g transform="translate(12 12)">
+  <rect x="0" y="0" width="82" height="82" rx="9" fill="#08265a"/>
+  <rect x="94" y="0" width="82" height="82" rx="9" fill="#a0003a"/>
+  <rect x="188" y="0" width="82" height="82" rx="9" fill="#a0003a"/>
+  <rect x="0" y="94" width="82" height="82" rx="9" fill="#08265a"/>
+  <rect x="94" y="94" width="82" height="82" rx="9" fill="#ffd21f"/>
+  <rect x="188" y="94" width="82" height="82" rx="9" fill="#08265a"/>
+  <rect x="0" y="188" width="82" height="82" rx="9" fill="#a0003a"/>
+  <rect x="94" y="188" width="82" height="82" rx="9" fill="#a0003a"/>
+  <rect x="188" y="188" width="82" height="82" rx="9" fill="#08265a"/>
 </g>
 <g fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-weight="700">
-  <text x="316" y="100" font-size="78" letter-spacing="1.5">SAMSEN</text>
-  <text x="316" y="183" font-size="68" letter-spacing=".5">ENGINEERING</text>
-  <text x="316" y="263" font-size="66" letter-spacing=".5">CONTRACTOR</text>
+  <text x="326" y="91" font-size="76">SAMSEN</text>
+  <text x="326" y="176" font-size="68">ENGINEERING</text>
+  <text x="326" y="260" font-size="65">CONTRACTOR</text>
 </g>
 </svg>
