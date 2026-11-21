@@ -1580,3 +1580,24 @@ a,button,.service-card,.portfolio-image-card{transition-timing-function:cubic-be
 .hero-slider .slide-caption{position:absolute!important}
 .hero-slider .slide.active.video-fallback .slide-video{display:none!important}
 .hero-slider .slide.active.video-fallback:before{opacity:1!important}
+
+
+/* Lightweight image-only cinematic hero: no MP4 requests, fast image transitions */
+.hero-slider .slide-video{display:none!important}
+.hero-slider .slide:before{
+ opacity:1!important;
+ background-size:cover!important;
+ background-position:center center!important;
+ transform:scale(1.015);
+ transition:transform 8s ease,opacity .8s ease!important;
+}
+.hero-slider .slide.active:before{transform:scale(1.065)}
+.hero-slider .slide-shade{z-index:1!important}
+.hero-slider .slide-content,.hero-slider .slide-caption{z-index:2!important}
+@media(max-width:700px){
+ .hero-slider .slide:before{background-size:cover!important;background-position:center center!important;transform:none!important}
+ .hero-slider .slide.active:before{transform:scale(1.025)!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-slider .slide:before,.hero-slider .slide.active:before{transition:none!important;transform:none!important}
+}
