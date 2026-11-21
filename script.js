@@ -5,48 +5,135 @@ menuButton?.addEventListener('click', () => {
   menuButton.setAttribute('aria-expanded', String(isOpen));
   menuButton.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
 });
-document.querySelectorAll('.nav-links a').forEach((link) => {
-  link.addEventListener('click', () => {
-    navigation.classList.remove('open');
-    menuButton?.setAttribute('aria-expanded', 'false');
-    menuButton?.setAttribute('aria-label', 'Open navigation');
-  });
-});
-document.querySelector('#year').textContent = new Date().getFullYear();
+document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => {
+  navigation.classList.remove('open');
+  menuButton?.setAttribute('aria-expanded', 'false');
+  menuButton?.setAttribute('aria-label', 'Open navigation');
+}));
+const year = document.querySelector('#year');
+if (year) year.textContent = new Date().getFullYear();
 
-/* Premium entrance and count-up motion */
+/* Accessible automatic hero carousel */
+(() => {
+  const slides = [...document.querySelectorAll('.slide')];
+  const dots = [...document.querySelectorAll('.slider-dot')];
+  const progress = document.querySelector('.slider-progress span');
+  const previous = document.querySelector('.slider-prev');
+  const next = document.querySelector('.slider-next');
+  const hero = document.querySelector('.hero-slider');
+  if (!slides.length || !dots.length || !hero) return;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const duration = 6500;
+  let current = 0;
+  let timer = null;
+  let paused = false;
+
+  function setSlide(index) {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => {
+      const active = i === current;
+      slide.classList.toggle('active', active);
+      slide.setAttribute('aria-hidden', String(!active));
+    });
+    dots.forEach((dot, i) => {
+      const active = i === current;
+      dot.classList.toggle('active', active);
+      dot.setAttribute('aria-pressed', String(active));
+    });
+    if (progress) {
+      progress.classList.remove('run');
+      void progress.offsetWidth;
+      if (!paused && !reducedMotion) progress.classList.add('run');
+    }
+  }
+  function stop() {
+    if (timer) window.clearInterval(timer);
+    timer = null;
+    progress?.classList.remove('run');
+  }
+  function start() {
+    stop();
+    if (paused || reducedMotion || document.hidden) return;
+    setSlide(current);
+    timer = window.setInterval(() => setSlide(current + 1), duration);
+  }
+  function go(index) { setSlide(index); start(); }
+  previous?.addEventListener('click', () => go(current - 1));
+  next?.addEventListener('click', () => go(current + 1));
+  dots.forEach((dot, index) => dot.addEventListener('click', () => go(index)));
+  hero.addEventListener('mouseenter', () => { paused = true; stop(); });
+  hero.addEventListener('mouseleave', () => { paused = false; start(); });
+  hero.addEventListener('focusin', () => { paused = true; stop(); });
+  hero.addEventListener('focusout', event => {
+    if (!hero.contains(event.relatedTarget)) { paused = false; start(); }
+  });
+  document.addEventListener('visibilitychange', () => document.hidden ? stop() : start());
+  hero.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft') go(current - 1);
+    if (event.key === 'ArrowRight') go(current + 1);
+  });
+  setSlide(0);
+  start();
+})();
+
+/* Reveal content as it enters the viewport */
 const revealTargets = document.querySelectorAll('.service-card,.values-strip>div,.project,.contact-panel');
 if ('IntersectionObserver' in window) {
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
     });
   }, {threshold: 0.12});
   revealTargets.forEach(el => { el.classList.add('reveal'); revealObserver.observe(el); });
 }
+
+/* Small count-up details */
 const counters = document.querySelectorAll('[data-count]');
 if ('IntersectionObserver' in window && counters.length) {
   const counterObserver = new IntersectionObserver(entries => entries.forEach(entry => {
     if (!entry.isIntersecting || entry.target.dataset.done) return;
-    const el = entry.target; el.dataset.done = '1';
-    const target = Number(el.dataset.count); const start = performance.now(); const duration = 1000;
-    const tick = now => { const p = Math.min((now-start)/duration,1); el.textContent = String(Math.round(target*(1-Math.pow(1-p,3)))) + '+'; if(p<1) requestAnimationFrame(tick); };
-    requestAnimationFrame(tick); counterObserver.unobserve(el);
-  }), {threshold:.5});
+    const el = entry.target;
+    el.dataset.done = '1';
+    const target = Number(el.dataset.count);
+    const start = performance.now();
+    const duration = 1000;
+    const tick = now => {
+      const p = Math.min((now - start) / duration, 1);
+      el.textContent = String(Math.round(target * (1 - Math.pow(1 - p, 3)))) + '+';
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+    counterObserver.unobserve(el);
+  }), {threshold: 0.5});
   counters.forEach(el => counterObserver.observe(el));
 }
-/* Replace sample inspiration cards with real projects published from the admin dashboard. */
-fetch('/api/projects').then(r => r.ok ? r.json() : []).then(projects => {
-  if (!Array.isArray(projects) || !projects.length) return;
-  const gallery = document.querySelector('#projectGallery');
-  if (!gallery) return;
-  gallery.innerHTML = projects.map((p,i) => `
-    <article class="project ${i===0?'project-large':''}">
-      <img src="${p.image}" alt="${escapeHtml(p.title)}" loading="lazy">
-      <div class="project-overlay"><span>${escapeHtml(p.category)}</span><h3>${escapeHtml(p.title)}</h3><p>${escapeHtml(p.location || 'Samsen project')}</p></div>
-    </article>`).join('');
-  document.querySelector('#galleryNote').textContent = 'Selected project photographs published by Samsen Engineering Contractor.';
-}).catch(() => {});
+
+/* Replace inspiration cards with approved company projects from the admin API. */
+fetch('/api/projects')
+  .then(response => response.ok ? response.json() : [])
+  .then(projects => {
+    if (!Array.isArray(projects) || !projects.length) return;
+    const gallery = document.querySelector('#projectGallery');
+    if (!gallery) return;
+    gallery.innerHTML = projects.map((project, index) => {
+      const imagePath = String(project.image || '');
+      const safeImage = imagePath.startsWith('/uploads/') ? imagePath : '';
+      return `
+        <article class="project ${index === 0 ? 'project-large' : ''}">
+          <img src="${escapeHtml(safeImage)}" alt="${escapeHtml(project.title)}" loading="lazy">
+          <div class="project-overlay"><span>${escapeHtml(project.category)}</span><h3>${escapeHtml(project.title)}</h3><p>${escapeHtml(project.location || 'Samsen project')}</p></div>
+        </article>`;
+    }).join('');
+    const note = document.querySelector('#galleryNote');
+    if (note) note.textContent = 'Selected project photographs published by Samsen Engineering Contractor.';
+  })
+  .catch(() => {});
+
 function escapeHtml(value) {
-  return String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  return String(value ?? '').replace(/[&<>"']/g, character => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[character]));
 }
