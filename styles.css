@@ -1676,3 +1676,67 @@ body.premium-site .services .service-card-feature{background:#fff!important}
   }
   body.premium-site .services .service-card:nth-child(n){border-left:1px solid rgba(16,33,60,.14)!important;border-top:1px solid rgba(16,33,60,.14)!important}
 }
+
+
+/* Compact pre-footer stats band — keep the Samsen deep navy and gold palette */
+.samsen-stats-band{
+  position:relative;
+  overflow:hidden;
+  padding:34px 0;
+  color:#f7f8fc;
+  background:linear-gradient(110deg,#07152d 0%,#0b1d39 55%,#07152d 100%);
+  border-top:1px solid rgba(216,184,117,.28);
+  border-bottom:1px solid rgba(216,184,117,.28);
+}
+.samsen-stats-inner{
+  display:grid;
+  grid-template-columns:1.35fr repeat(3,minmax(0,1fr));
+  align-items:center;
+  gap:24px;
+}
+.samsen-stats-intro{
+  color:#fff;
+  font:600 clamp(17px,1.7vw,23px)/1.35 'Manrope',sans-serif;
+}
+.samsen-stats-intro em{
+  color:#e2c17d;
+  font-family:Georgia,serif;
+  font-weight:400;
+}
+.samsen-stat{
+  min-height:82px;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  align-content:center;
+  column-gap:12px;
+  row-gap:4px;
+  padding-left:24px;
+  border-left:1px solid rgba(216,184,117,.32);
+}
+.samsen-stat-number{
+  grid-row:span 2;
+  align-self:center;
+  color:#e7c77f;
+  font:500 clamp(34px,4vw,52px)/1 Georgia,serif;
+}
+.samsen-stat-label{
+  align-self:end;
+  color:#f0d79f;
+  font:700 9px/1.4 'Manrope',sans-serif;
+  letter-spacing:.13em;
+}
+.samsen-stat small{
+  color:#c3ccdc;
+  font:400 10px/1.5 'DM Sans',sans-serif;
+}
+@media(max-width:800px){
+  .samsen-stats-inner{grid-template-columns:1fr 1fr;gap:22px}
+  .samsen-stats-intro{grid-column:1/-1}
+  .samsen-stat{padding-left:16px}
+}
+@media(max-width:480px){
+  .samsen-stats-band{padding:28px 0}
+  .samsen-stats-inner{grid-template-columns:1fr;gap:16px}
+  .samsen-stats-intro{grid-column:auto;margin-bottom:4px}
+  .samsen-stat{min-height:64px}
+}
