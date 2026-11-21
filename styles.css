@@ -1932,3 +1932,27 @@ body.premium-site section#services .service-grid article.service-card:hover{
     border:1px solid rgba(216,184,117,.4)!important;
   }
 }
+
+
+/* FINAL OVERRIDE — service section must use Samsen navy, not white cards */
+html body.premium-site section.services#services{
+  background:#07152d!important;
+  background-image:linear-gradient(135deg,#07152d 0%,#0b1d39 52%,#050f21 100%)!important;
+  color:#f7f8fc!important;
+}
+html body.premium-site section.services#services .service-grid > article.service-card,
+html body.premium-site section.services#services .service-grid > article.service-card:nth-child(n),
+html body.premium-site section.services#services .service-grid > article.service-card.service-card-feature{
+  background-color:#102544!important;
+  background-image:linear-gradient(145deg,#102544 0%,#0a1a33 100%)!important;
+  color:#f7f8fc!important;
+  border:1px solid rgba(216,184,117,.48)!important;
+  box-shadow:0 16px 38px rgba(0,0,0,.24)!important;
+}
+html body.premium-site section.services#services .service-grid > article.service-card > h3{color:#fff!important}
+html body.premium-site section.services#services .service-grid > article.service-card > p{color:#c3ccdc!important}
+html body.premium-site section.services#services .service-grid > article.service-card > .service-no{color:#e0c17f!important}
+html body.premium-site section.services#services .service-grid > article.service-card > .service-link{color:#e4c782!important}
+html body.premium-site section.services#services .section-heading h2{color:#fff!important}
+html body.premium-site section.services#services .section-heading h2 em{color:#d8b875!important}
+html body.premium-site section.services#services .section-note{color:#c3ccdc!important}
