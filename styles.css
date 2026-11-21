@@ -1740,3 +1740,68 @@ body.premium-site .services .service-card-feature{background:#fff!important}
   .samsen-stats-intro{grid-column:auto;margin-bottom:4px}
   .samsen-stat{min-height:64px}
 }
+
+
+/* Match the supplied company-highlights reference, positioned directly above footer */
+.samsen-stats-band{
+  padding:28px 0!important;
+  background:linear-gradient(110deg,#07152d,#0b1d39 52%,#07152d)!important;
+  color:#fff!important;
+  border-top:1px solid rgba(216,184,117,.25);
+  border-bottom:1px solid rgba(216,184,117,.25);
+}
+.samsen-stats-inner{
+  display:grid!important;
+  grid-template-columns:1.55fr repeat(3,minmax(0,1fr))!important;
+  align-items:center!important;
+  gap:24px!important;
+}
+.samsen-stats-intro{
+  color:#fff!important;
+  font:700 clamp(16px,1.45vw,22px)/1.3 Georgia,serif!important;
+}
+.samsen-stat{
+  display:grid!important;
+  grid-template-columns:auto auto!important;
+  grid-template-rows:auto auto!important;
+  justify-content:center!important;
+  align-items:center!important;
+  justify-items:center!important;
+  column-gap:9px!important;
+  row-gap:0!important;
+  min-height:90px!important;
+  padding:0 8px!important;
+  border-left:0!important;
+}
+.samsen-stat-icon{
+  color:#f4bd00!important;
+  font:700 clamp(30px,3.1vw,48px)/1 Arial,sans-serif!important;
+  grid-column:1!important;
+  grid-row:1!important;
+}
+.samsen-stat-number{
+  color:#f4bd00!important;
+  font:400 clamp(38px,3.5vw,58px)/1 Georgia,serif!important;
+  grid-column:2!important;
+  grid-row:1!important;
+}
+.samsen-stat-label{
+  color:#f3f4f7!important;
+  font:400 clamp(12px,1.15vw,17px)/1.25 Georgia,serif!important;
+  letter-spacing:0!important;
+  grid-column:1/-1!important;
+  grid-row:2!important;
+  text-align:center!important;
+  margin-top:5px!important;
+}
+.samsen-stat small{display:none!important}
+@media(max-width:760px){
+  .samsen-stats-inner{grid-template-columns:1fr 1fr!important;gap:14px!important}
+  .samsen-stats-intro{grid-column:1/-1!important;text-align:center!important}
+  .samsen-stat{min-height:75px!important}
+}
+@media(max-width:420px){
+  .samsen-stats-inner{grid-template-columns:1fr!important;gap:8px!important}
+  .samsen-stats-intro{margin-bottom:8px!important}
+  .samsen-stat{min-height:64px!important}
+}
