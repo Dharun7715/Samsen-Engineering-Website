@@ -77,7 +77,7 @@ if (year) year.textContent = new Date().getFullYear();
 })();
 
 /* Reveal content as it enters the viewport */
-const revealTargets = document.querySelectorAll('.service-card,.values-strip>div,.project,.contact-panel');
+const revealTargets = document.querySelectorAll('.service-card,.values-strip>div,.project,.contact-panel,.proof-card');
 if ('IntersectionObserver' in window) {
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -102,7 +102,7 @@ if ('IntersectionObserver' in window && counters.length) {
     const duration = 1000;
     const tick = now => {
       const p = Math.min((now - start) / duration, 1);
-      el.textContent = String(Math.round(target * (1 - Math.pow(1 - p, 3)))) + '+';
+      el.textContent = String(Math.round(target * (1 - Math.pow(1 - p, 3)))) + (el.dataset.suffix || '');
       if (p < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
@@ -229,22 +229,4 @@ function escapeHtml(value) {
   });
   reset?.addEventListener('click',()=>{rotationX=-13;rotationY=-32;render()});
   render();
-})();
-
-/* Reveal the new statistics cards when visible */
-(() => {
- const cards=document.querySelectorAll('.proof-card');
- if(!('IntersectionObserver'in window)){cards.forEach(card=>card.classList.add('is-visible'));return}
- const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
-   if(!entry.isIntersecting)return;
-   const el=entry.target.querySelector('[data-count]');
-   if(el&&!el.dataset.done){
-     el.dataset.done='1';const target=Number(el.dataset.count);const start=performance.now();
-     const duration=1200;
-     const tick=now=>{const progress=Math.min((now-start)/duration,1);el.textContent=String(Math.round(target*(1-Math.pow(1-progress,3))))+(el.dataset.suffix||'');if(progress<1)requestAnimationFrame(tick)};
-     requestAnimationFrame(tick);
-   }
-   observer.unobserve(entry.target);
- }),{threshold:.35});
- cards.forEach(card=>observer.observe(card));
 })();
