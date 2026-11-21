@@ -1569,3 +1569,14 @@ a,button,.service-card,.portfolio-image-card{transition-timing-function:cubic-be
 .hero-slider .slide:not(.active) .slide-video{opacity:0}
 @media(max-width:700px){.hero-slider .slide-video{object-position:center center}.hero-slider .slide-shade{background:linear-gradient(180deg,rgba(3,12,29,.82),rgba(3,12,29,.52) 55%,rgba(3,12,29,.72))!important}}
 @media(prefers-reduced-motion:reduce){.hero-slider .slide-video{display:none!important}.hero-slider .slide:before{opacity:1!important}}
+
+
+/* Stable visible video layer and graceful fallback for every carousel slide */
+.hero-slider .slide{isolation:isolate}
+.hero-slider .slide-video{z-index:0!important;display:block!important;opacity:0;visibility:hidden}
+.hero-slider .slide.active .slide-video{opacity:1;visibility:visible}
+.hero-slider .slide-shade{z-index:1!important}
+.hero-slider .slide-content,.hero-slider .slide-caption{position:relative;z-index:2!important}
+.hero-slider .slide-caption{position:absolute!important}
+.hero-slider .slide.active.video-fallback .slide-video{display:none!important}
+.hero-slider .slide.active.video-fallback:before{opacity:1!important}
