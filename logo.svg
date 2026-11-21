@@ -1,21 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="820" height="300" viewBox="0 0 820 300" role="img" aria-labelledby="title">
 <title id="title">Samsen Engineering Contractor</title>
-<rect width="820" height="300" fill="#08245b"/>
-<g transform="translate(24 22)" stroke="#fff" stroke-width="7">
-  <rect x="0" y="0" width="244" height="244" rx="5" fill="none"/>
-  <rect x="8" y="8" width="70" height="70" rx="7" fill="#08245b"/>
-  <rect x="87" y="8" width="70" height="70" rx="7" fill="#a80b3c"/>
-  <rect x="166" y="8" width="70" height="70" rx="7" fill="#a80b3c"/>
-  <rect x="8" y="87" width="70" height="70" rx="7" fill="#08245b"/>
-  <rect x="87" y="87" width="70" height="70" rx="7" fill="#a80b3c"/>
-  <rect x="166" y="87" width="70" height="70" rx="7" fill="#08245b"/>
-  <rect x="8" y="166" width="70" height="70" rx="7" fill="#a80b3c"/>
-  <rect x="87" y="166" width="70" height="70" rx="7" fill="#a80b3c"/>
-  <rect x="166" y="166" width="70" height="70" rx="7" fill="#08245b"/>
+<g transform="translate(24 22)" stroke="#0b1d3b" stroke-width="7">
+<rect x="0" y="0" width="244" height="244" rx="5" fill="none"/>
+<rect x="8" y="8" width="70" height="70" rx="7" fill="#0b1d3b"/>
+<rect x="87" y="8" width="70" height="70" rx="7" fill="#a80b3c"/>
+<rect x="166" y="8" width="70" height="70" rx="7" fill="#a80b3c"/>
+<rect x="8" y="87" width="70" height="70" rx="7" fill="#0b1d3b"/>
+<rect x="87" y="87" width="70" height="70" rx="7" fill="#d8b875"/>
+<rect x="166" y="87" width="70" height="70" rx="7" fill="#0b1d3b"/>
+<rect x="8" y="166" width="70" height="70" rx="7" fill="#a80b3c"/>
+<rect x="87" y="166" width="70" height="70" rx="7" fill="#a80b3c"/>
+<rect x="166" y="166" width="70" height="70" rx="7" fill="#0b1d3b"/>
 </g>
-<g fill="#fff" font-family="Georgia, 'Times New Roman', serif" font-weight="700">
-  <text x="300" y="94" font-size="62">SAMSEN</text>
-  <text x="300" y="166" font-size="58">ENGINEERING</text>
-  <text x="300" y="238" font-size="55">CONTRACTOR</text>
-</g>
-</svg>
+<g fill="#0b1d3b" font-family="Georgia, 'Times New Roman', serif" font-weight="700">
+<text x="300" y="94" font-size="62">SAMSEN</text>
+<text x="300" y="166" font-size="58">ENGINEERING</text>
+<text x="300" y="238" font-size="55">CONTRACTOR</text>
+</g></svg>
