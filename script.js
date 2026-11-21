@@ -194,39 +194,3 @@ function escapeHtml(value) {
     image.src = url;
   });
 })();
-
-
-/* Interactive 3D building controls — pointer, touch and keyboard accessible */
-(() => {
-  const stage=document.querySelector('.model-stage');
-  const model=document.querySelector('.building-model');
-  const reset=document.querySelector('.model-reset');
-  if(!stage||!model)return;
-  let rotationX=-13,rotationY=-32,startX=0,startY=0,baseX=rotationX,baseY=rotationY,dragging=false;
-  const render=()=>{model.style.transform='rotateX('+rotationX+'deg) rotateY('+rotationY+'deg)'};
-  const clamp=(v,min,max)=>Math.min(max,Math.max(min,v));
-  stage.addEventListener('pointerdown',event=>{
-    if(event.target.closest('button'))return;
-    dragging=true;startX=event.clientX;startY=event.clientY;baseX=rotationX;baseY=rotationY;
-    stage.classList.add('is-dragging');stage.setPointerCapture?.(event.pointerId);
-  });
-  stage.addEventListener('pointermove',event=>{
-    if(!dragging)return;
-    rotationY=baseY+(event.clientX-startX)*.55;
-    rotationX=clamp(baseX-(event.clientY-startY)*.35,-38,18);
-    render();
-  });
-  const stop=()=>{dragging=false;stage.classList.remove('is-dragging')};
-  stage.addEventListener('pointerup',stop);stage.addEventListener('pointercancel',stop);stage.addEventListener('lostpointercapture',stop);
-  stage.addEventListener('keydown',event=>{
-    const step=event.shiftKey?15:7;
-    if(event.key==='ArrowLeft')rotationY-=step;
-    else if(event.key==='ArrowRight')rotationY+=step;
-    else if(event.key==='ArrowUp')rotationX=clamp(rotationX-step,-38,18);
-    else if(event.key==='ArrowDown')rotationX=clamp(rotationX+step,-38,18);
-    else return;
-    event.preventDefault();render();
-  });
-  reset?.addEventListener('click',()=>{rotationX=-13;rotationY=-32;render()});
-  render();
-})();
