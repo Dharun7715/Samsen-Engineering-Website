@@ -570,3 +570,12 @@ body{background:#f4f3ef}
 .premium-footer .footer-bottom{border-top-color:rgba(216,184,117,.25);color:#b9c5d7}
 .premium-footer .back-top,
 .premium-footer .footer-column .footer-map{color:#e0c58e}
+
+
+/* Center the homepage hero slide indicators */
+.hero-controls{justify-content:center}
+.hero-controls .slider-dots{position:absolute;left:50%;transform:translateX(-50%);justify-content:center}
+.hero-controls .slider-arrows{margin-left:auto}
+@media(max-width:600px){
+  .hero-controls .slider-dots{left:50%;transform:translateX(-50%)}
+}
