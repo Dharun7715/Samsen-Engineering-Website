@@ -196,3 +196,57 @@ button{font:inherit}
  .footer{padding-bottom:76px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
+
+/* Added premium service detail, trust and process sections */
+.service-detail-heading{margin:78px 0 28px;max-width:680px}
+.service-detail-heading .eyebrow{margin-bottom:18px}
+.service-detail-heading h3{font:500 clamp(28px,3.4vw,42px)/1.15 'Manrope',sans-serif;letter-spacing:-.04em;margin:0 0 13px;color:#fff}
+.service-detail-heading>p:last-child{max-width:570px;color:#c3ccdc;font-size:13px;line-height:1.8;margin:0}
+.service-detail-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.service-detail{padding:25px 23px 26px;border:1px solid rgba(255,255,255,.19);background:rgba(255,255,255,.035);min-height:220px;display:flex;flex-direction:column;align-items:flex-start;transition:transform .25s,border-color .25s,background .25s}
+.service-detail:hover{transform:translateY(-4px);border-color:var(--gold);background:rgba(255,255,255,.07)}
+.service-detail>span{font:italic 22px Georgia,serif;color:var(--gold)}
+.service-detail h3{font:600 17px 'Manrope',sans-serif;color:#fff;margin:17px 0 9px}
+.service-detail p{font-size:11px;line-height:1.8;color:#c3ccdc;margin:0 0 20px}
+.service-detail a{font-size:10px;font-weight:700;color:var(--gold);margin-top:auto}
+.why-samsen{background:#fff}
+.why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:95px;align-items:start}
+.why-intro h2{font:500 clamp(42px,5vw,64px)/1.1 'Manrope',sans-serif;letter-spacing:-.055em;color:var(--navy);margin:0}
+.why-intro h2 em{font:400 1em Georgia,serif;color:var(--red)}
+.why-intro>p:not(.eyebrow){max-width:420px;font-size:14px;line-height:1.9;color:var(--muted);margin:25px 0}
+.why-list{border-top:1px solid var(--line)}
+.why-list article{display:grid;grid-template-columns:48px 1fr;gap:17px;padding:23px 0;border-bottom:1px solid var(--line)}
+.why-list article>span{font:italic 23px Georgia,serif;color:var(--red)}
+.why-list h3{font:600 17px 'Manrope',sans-serif;color:var(--navy);margin:0 0 7px}
+.why-list p{font-size:12px;line-height:1.8;color:var(--muted);margin:0}
+.process-section{background:var(--navy2);color:#fff}
+.process-heading h2{color:#fff}
+.process-heading h2 em{color:var(--gold)}
+.process-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.2);border-bottom:1px solid rgba(255,255,255,.2)}
+.process-step{position:relative;padding:25px 24px 27px 0;min-height:245px}
+.process-step+.process-step{border-left:1px solid rgba(255,255,255,.2);padding-left:24px}
+.process-step>span{font-size:9px;letter-spacing:.16em;color:var(--gold)}
+.process-mark{width:52px;height:52px;border:1px solid rgba(216,184,117,.6);display:grid;place-items:center;color:var(--gold);font:28px Georgia,serif;margin:25px 0 19px}
+.process-step h3{font:600 18px 'Manrope',sans-serif;margin:0 0 10px;color:#fff}
+.process-step p{font-size:11px;line-height:1.8;color:#c3ccdc;margin:0;max-width:220px}
+@media(max-width:900px){
+ .nav-links{gap:12px;font-size:11px}
+ .service-detail-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .why-grid{gap:45px}
+ .process-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .process-step:nth-child(3){border-left:0;border-top:1px solid rgba(255,255,255,.2);padding-left:0}
+ .process-step:nth-child(4){border-top:1px solid rgba(255,255,255,.2)}
+}
+@media(max-width:700px){
+ .nav-links{font-size:12px}
+ .service-detail-heading{margin:55px 0 22px}
+ .service-detail-grid{grid-template-columns:1fr}
+ .service-detail{min-height:0;padding:22px}
+ .why-grid{grid-template-columns:1fr;gap:35px}
+ .why-intro h2{font-size:clamp(40px,10vw,55px)}
+ .why-list article{grid-template-columns:36px 1fr}
+ .process-grid{grid-template-columns:1fr}
+ .process-step,.process-step+.process-step,.process-step:nth-child(3),.process-step:nth-child(4){border-left:0;border-top:1px solid rgba(255,255,255,.2);padding:22px 0;min-height:0}
+ .process-step:first-child{border-top:0}
+ .process-mark{margin:17px 0 13px}
+}
