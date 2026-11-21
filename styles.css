@@ -579,3 +579,43 @@ body{background:#f4f3ef}
 @media(max-width:600px){
   .hero-controls .slider-dots{left:50%;transform:translateX(-50%)}
 }
+
+
+/* Mobile hero: show the complete architectural slide image without cropping */
+@media(max-width:700px){
+  .hero-slider{
+    height: min(900px, calc(100svh - 70px));
+    min-height: 790px;
+    max-height: 900px;
+  }
+  .slide:before{
+    background-size:100% auto;
+    background-position:center bottom 68px;
+    background-repeat:no-repeat;
+    transform:none!important;
+    filter:saturate(1.02) contrast(1.03);
+  }
+  .slide.active:before{transform:none!important}
+  .slide-shade{
+    background:linear-gradient(180deg,
+      rgba(3,12,29,.98) 0%,
+      rgba(3,12,29,.92) 38%,
+      rgba(3,12,29,.55) 59%,
+      rgba(3,12,29,.08) 100%);
+  }
+  .slide-content{padding-top:68px;padding-bottom:300px}
+  .slide-kicker{margin-bottom:16px;font-size:8px}
+  .slide h1{font-size:clamp(42px,10.5vw,58px);line-height:1.04}
+  .slide-copy{font-size:13px;line-height:1.65;margin:18px 0 22px;max-width:100%}
+  .hero-actions{gap:16px}
+  .button{padding:13px 15px;gap:14px}
+  .slide-caption{right:16px;bottom:105px;font-size:7px;padding:8px 10px}
+  .hero-controls{bottom:42px}
+  .hero-bottom{bottom:12px;font-size:7px;white-space:nowrap}
+}
+@media(max-width:390px){
+  .hero-slider{min-height:760px}
+  .slide-content{padding-top:58px}
+  .slide h1{font-size:42px}
+  .slide-copy{font-size:12px}
+}
