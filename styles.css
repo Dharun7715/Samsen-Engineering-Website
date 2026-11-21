@@ -495,3 +495,54 @@ button{font:inherit}
 .portfolio-note{font-size:10px;color:#818b9b;margin:18px 0 0;line-height:1.6}
 @media(max-width:800px){.portfolio-image-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:230px}.portfolio-image-tall{grid-row:span 1}}
 @media(max-width:520px){.portfolio-image-grid{grid-template-columns:1fr;grid-auto-rows:270px}.portfolio-heading{margin-bottom:27px}.portfolio-image-card figcaption strong{font-size:16px}}
+
+/* CINEMATIC SIGNATURE EXPERIENCE */
+:root{--navy:#07142b;--navy2:#030b1a;--gold:#d9bd82;--red:#a5093d}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{background:#f4f3ef}
+.site-header{background:rgba(5,17,39,.96);backdrop-filter:blur(18px);border-bottom:1px solid rgba(225,197,142,.2);box-shadow:0 12px 40px rgba(0,0,0,.16)}
+.nav-links{color:#d5ddeb}
+.nav-links>a:not(.nav-cta):hover,.nav-links>a.active{color:var(--gold)}
+.nav-cta{background:linear-gradient(110deg,#a5093d,#720c35);border:1px solid rgba(255,255,255,.14)}
+.menu-toggle span{background:#fff}
+.hero-slider{height:min(850px,calc(100svh - 122px));min-height:660px;background:#030b1a}
+.slide:before{filter:saturate(.82) contrast(1.08);transform:scale(1.12);transition:transform 9s cubic-bezier(.2,.65,.3,1),filter 1.2s}
+.slide.active:before{transform:scale(1.015);filter:saturate(1) contrast(1.04)}
+.slide-shade{background:linear-gradient(90deg,rgba(2,9,23,.94) 0%,rgba(3,12,29,.78) 38%,rgba(3,12,29,.24) 76%,rgba(3,12,29,.08) 100%),linear-gradient(0deg,rgba(2,8,20,.82),transparent 55%),linear-gradient(180deg,rgba(2,8,20,.25),transparent 30%)}
+.slide-content{padding-top:clamp(115px,16vh,185px)}
+.slide h1{font-size:clamp(62px,8vw,112px);text-shadow:0 8px 38px rgba(0,0,0,.25)}
+.slide-copy{font-size:15px;max-width:510px;color:#e2e7ef}
+.slide-kicker{color:#e4c78e}
+.slide-caption{padding:14px 18px;border-left:1px solid var(--gold);background:rgba(3,12,29,.28);backdrop-filter:blur(8px)}
+.hero-controls{bottom:72px}
+.slider-arrows button{backdrop-filter:blur(10px);border-color:rgba(225,197,142,.45)}
+.hero-bottom{color:#d4dceb}
+.hero-bottom a{color:#e5c98e}
+.welcome-band{background:linear-gradient(110deg,#a5093d,#710b32);color:#fff;text-align:center;padding:35px 20px;border-top:1px solid rgba(255,255,255,.2);border-bottom:1px solid rgba(7,20,43,.15)}
+.welcome-band span{font-size:9px;letter-spacing:.3em;color:#f0d8a6}
+.welcome-band h2{font:600 clamp(22px,3vw,34px)/1.2 'Manrope',sans-serif;letter-spacing:.06em;margin:9px 0}
+.welcome-band p{font-size:12px;color:#f2dfe7;margin:0}
+.section-pad{padding:125px 0}
+.intro{background:linear-gradient(180deg,#f8f7f3,#eeece6)}
+.why-samsen{background:#f3f1eb}
+.services{background:radial-gradient(ellipse at 80% 0%,#142c50 0%,#071832 48%,#050f22 100%)}
+.service-card{transition:background .35s,transform .35s}
+.service-card:hover{background:rgba(255,255,255,.045);transform:translateY(-3px)}
+.projects{background:#faf9f6}
+.statement{position:relative;isolation:isolate}
+.statement:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(3,11,26,.96),rgba(3,11,26,.66))}
+.contact{background:#eeece6}
+.contact-panel{border-top:3px solid var(--gold);background:#fff;box-shadow:0 24px 70px rgba(8,24,49,.12)}
+.footer{background:#030b1a;border-top:1px solid rgba(217,189,130,.3)}
+.back-top{color:var(--gold)}
+@media(max-width:700px){
+ .site-header{background:rgba(5,17,39,.98)}
+ .nav-links{background:#07142b;color:#e4eaf3;border-top:1px solid rgba(217,189,130,.2)}
+ .nav-links>a:not(.nav-cta){border-bottom-color:rgba(255,255,255,.1)}
+ .hero-slider{height:calc(92svh - 104px);min-height:650px}
+ .slide:before{background-position:58% center}
+ .slide-content{padding-top:120px}
+ .slide h1{font-size:clamp(54px,12vw,76px)}
+ .section-pad{padding:88px 0}
+}
+@media(prefers-reduced-motion:reduce){.slide:before,.slide,.service-card{transition:none!important}}
