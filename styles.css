@@ -555,3 +555,18 @@ body{background:#f4f3ef}
 .story-visual img{transition:none!important;transform:none!important}
 .story-visual.is-changing img{opacity:1;transform:none}
 @media(max-width:700px){.story-visual{height:300px;position:relative!important;top:auto!important}.story-step{min-height:0;padding:25px 0}}
+
+
+/* Match the footer to Samsen's signature navy-blue brand palette */
+.premium-footer{
+  background:linear-gradient(135deg,#0b1d3b 0%,#07142b 58%,#061126 100%);
+  border-top:1px solid rgba(216,184,117,.28);
+}
+.premium-footer .footer-brand-block>p{color:#d4ddec}
+.premium-footer .footer-location{color:#d8b875}
+.premium-footer .footer-column>a,
+.premium-footer .footer-column p{color:#dce4ef}
+.premium-footer .footer-column h3{border-color:rgba(216,184,117,.38)}
+.premium-footer .footer-bottom{border-top-color:rgba(216,184,117,.25);color:#b9c5d7}
+.premium-footer .back-top,
+.premium-footer .footer-column .footer-map{color:#e0c58e}
