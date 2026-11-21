@@ -2147,3 +2147,87 @@ button,a{-webkit-tap-highlight-color:transparent}
  .premium-site .contact-panel,.premium-site .proof-card,.premium-site .samsen-stat,
  .premium-site .portfolio-image-card,.premium-site .button{transition:none!important}
 }
+
+
+/* FINAL VISIBLE GOLD GLOW — stronger always-on edge light, not hover-only */
+body.premium-site .why-cinematic-card,
+body.premium-site .why-cinematic-image,
+body.premium-site .service-grid > .service-card,
+body.premium-site .project-preview-grid > article,
+body.premium-site .story-visual,
+body.premium-site .story-step,
+body.premium-site .values-strip > div,
+body.premium-site .contact-panel,
+body.premium-site .samsen-stat,
+body.premium-site .portfolio-image-card{
+  position:relative!important;
+  border:1px solid rgba(226,190,117,.82)!important;
+  box-shadow:
+    0 0 0 1px rgba(226,190,117,.18),
+    0 0 12px rgba(226,190,117,.24),
+    0 0 28px rgba(226,190,117,.13),
+    0 16px 38px rgba(0,0,0,.28)!important;
+}
+body.premium-site .why-cinematic-card:hover,
+body.premium-site .why-cinematic-image:hover,
+body.premium-site .service-grid > .service-card:hover,
+body.premium-site .project-preview-grid > article:hover,
+body.premium-site .story-visual:hover,
+body.premium-site .story-step:hover,
+body.premium-site .values-strip > div:hover,
+body.premium-site .contact-panel:hover,
+body.premium-site .samsen-stat:hover,
+body.premium-site .portfolio-image-card:hover{
+  border-color:#f5d99a!important;
+  box-shadow:
+    0 0 0 1px rgba(245,217,154,.38),
+    0 0 16px rgba(245,217,154,.46),
+    0 0 38px rgba(226,190,117,.28),
+    0 20px 48px rgba(0,0,0,.34)!important;
+}
+body.premium-site .why-cinematic-icon,
+body.premium-site .service-no,
+body.premium-site .samsen-stat-icon{
+  filter:drop-shadow(0 0 5px rgba(226,190,117,.72)) drop-shadow(0 0 12px rgba(226,190,117,.32))!important;
+}
+body.premium-site .button,
+body.premium-site .nav-cta,
+body.premium-site .gallery-filter,
+body.premium-site .slider-arrows button,
+body.premium-site .slider-dot,
+body.premium-site .contact-call,
+body.premium-site .contact-email-link{
+  box-shadow:0 0 0 1px rgba(226,190,117,.28),0 0 13px rgba(226,190,117,.22),0 5px 20px rgba(0,0,0,.2)!important;
+}
+body.premium-site .button:hover,
+body.premium-site .nav-cta:hover,
+body.premium-site .gallery-filter:hover,
+body.premium-site .slider-arrows button:hover,
+body.premium-site .contact-call:hover,
+body.premium-site .contact-email-link:hover{
+  box-shadow:0 0 0 1px rgba(245,217,154,.65),0 0 18px rgba(245,217,154,.52),0 0 34px rgba(226,190,117,.3)!important;
+}
+body.premium-site .section-heading h2,
+body.premium-site .story-heading h2,
+body.premium-site .why-cinematic-heading h2{
+  text-shadow:0 0 22px rgba(226,190,117,.12);
+}
+body.premium-site .service-grid > .service-card:after,
+body.premium-site .why-cinematic-card:after,
+body.premium-site .story-step:after,
+body.premium-site .project-preview-grid > article:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  pointer-events:none;
+  box-shadow:inset 0 0 22px rgba(226,190,117,.08);
+}
+body.projects-page .portfolio-image-card{
+  border:1px solid rgba(226,190,117,.82)!important;
+  box-shadow:0 0 0 1px rgba(226,190,117,.18),0 0 12px rgba(226,190,117,.24),0 0 28px rgba(226,190,117,.13)!important;
+}
+body.projects-page .portfolio-image-card:hover{
+  border-color:#f5d99a!important;
+  box-shadow:0 0 0 1px rgba(245,217,154,.38),0 0 16px rgba(245,217,154,.46),0 0 38px rgba(226,190,117,.28)!important;
+}
