@@ -2036,3 +2036,114 @@ button,a{-webkit-tap-highlight-color:transparent}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+
+/* SAMSEN SIGNATURE GOLD GLOW — consistent finish across the entire website */
+:root{--samsen-gold:#d8b875;--samsen-gold-bright:#f0d596;--samsen-gold-soft:rgba(216,184,117,.22)}
+.premium-site .why-cinematic-card,
+.premium-site .why-cinematic-image,
+.premium-site .service-card,
+.premium-site .project-preview-grid>article,
+.premium-site .project,
+.premium-site .story-visual,
+.premium-site .story-step,
+.premium-site .values-strip>div,
+.premium-site .contact-panel,
+.premium-site .proof-card,
+.premium-site .samsen-stat,
+.premium-site .portfolio-image-card{
+  border-color:rgba(216,184,117,.42)!important;
+  box-shadow:0 10px 30px rgba(0,0,0,.22),0 0 13px rgba(216,184,117,.075),inset 0 0 18px rgba(216,184,117,.025)!important;
+  transition:border-color .3s ease,box-shadow .3s ease,transform .3s ease,filter .3s ease;
+}
+.premium-site .why-cinematic-card:hover,
+.premium-site .why-cinematic-image:hover,
+.premium-site .service-card:hover,
+.premium-site .project-preview-grid>article:hover,
+.premium-site .project:hover,
+.premium-site .story-step:hover,
+.premium-site .values-strip>div:hover,
+.premium-site .contact-panel:hover,
+.premium-site .proof-card:hover,
+.premium-site .samsen-stat:hover,
+.premium-site .portfolio-image-card:hover{
+  border-color:rgba(240,213,150,.9)!important;
+  box-shadow:0 16px 42px rgba(0,0,0,.3),0 0 9px rgba(216,184,117,.24),0 0 26px rgba(216,184,117,.17),inset 0 0 22px rgba(216,184,117,.065)!important;
+}
+.premium-site .button,
+.premium-site .nav-cta,
+.premium-site .gallery-filter,
+.premium-site .slider-arrows button,
+.premium-site .slider-dot,
+.premium-site .lightbox-close,
+.premium-site .lightbox-prev,
+.premium-site .lightbox-next{
+  border-color:rgba(216,184,117,.62)!important;
+  box-shadow:0 5px 18px rgba(216,184,117,.12),0 0 10px rgba(216,184,117,.08)!important;
+  transition:box-shadow .25s ease,border-color .25s ease,transform .25s ease,background .25s ease;
+}
+.premium-site .button:hover,
+.premium-site .nav-cta:hover,
+.premium-site .gallery-filter:hover,
+.premium-site .slider-arrows button:hover,
+.premium-site .lightbox-close:hover,
+.premium-site .lightbox-prev:hover,
+.premium-site .lightbox-next:hover{
+  border-color:#f0d596!important;
+  box-shadow:0 8px 24px rgba(216,184,117,.24),0 0 18px rgba(216,184,117,.22)!important;
+  transform:translateY(-2px);
+}
+.premium-site .eyebrow>span,
+.premium-site .service-card h3:after,
+.premium-site .project-preview-grid h3:after,
+.premium-site .why-cinematic-copy h3:after,
+.premium-site .why-divider span,
+.premium-site .under-link:after{
+  filter:drop-shadow(0 0 5px rgba(216,184,117,.65));
+}
+.premium-site .service-no,
+.premium-site .service-link,
+.premium-site .under-link,
+.premium-site .story-kicker,
+.premium-site .portfolio-image-card figcaption span,
+.premium-site .footer-column h3{
+  text-shadow:0 0 12px rgba(216,184,117,.22);
+}
+.premium-site input:focus,
+.premium-site textarea:focus,
+.premium-site select:focus,
+.premium-site button:focus-visible,
+.premium-site a:focus-visible{
+  outline:2px solid rgba(240,213,150,.9)!important;
+  outline-offset:3px!important;
+  box-shadow:0 0 0 4px rgba(216,184,117,.16),0 0 18px rgba(216,184,117,.18)!important;
+}
+.premium-site .contact-method,
+.premium-site .footer-column a,
+.premium-site .nav-links>a:not(.nav-cta){
+  transition:color .25s ease,text-shadow .25s ease;
+}
+.premium-site .contact-method:hover,
+.premium-site .footer-column a:hover,
+.premium-site .nav-links>a:not(.nav-cta):hover{
+  color:#f0d596!important;
+  text-shadow:0 0 12px rgba(216,184,117,.35);
+}
+.premium-site .why-cinematic-icon{
+  border-color:rgba(240,213,150,.78)!important;
+  box-shadow:inset 0 0 17px rgba(216,184,117,.13),0 0 17px rgba(216,184,117,.16)!important;
+}
+.premium-site .why-cinematic-card:hover .why-cinematic-icon{
+  box-shadow:inset 0 0 20px rgba(216,184,117,.22),0 0 24px rgba(216,184,117,.28)!important;
+}
+.premium-site .why-cinematic-image,
+.premium-site .portfolio-image-card{position:relative}
+.premium-site .why-cinematic-image:hover,
+.premium-site .portfolio-image-card:hover{filter:drop-shadow(0 0 8px rgba(216,184,117,.22))}
+@media(prefers-reduced-motion:reduce){
+ .premium-site .why-cinematic-card,.premium-site .why-cinematic-image,
+ .premium-site .service-card,.premium-site .project-preview-grid>article,
+ .premium-site .project,.premium-site .story-step,.premium-site .values-strip>div,
+ .premium-site .contact-panel,.premium-site .proof-card,.premium-site .samsen-stat,
+ .premium-site .portfolio-image-card,.premium-site .button{transition:none!important}
+}
