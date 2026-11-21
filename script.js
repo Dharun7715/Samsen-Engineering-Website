@@ -156,3 +156,37 @@ function escapeHtml(value) {
     });
   }));
 })();
+
+/* Scroll storytelling: update the pinned visual as each chapter enters focus */
+(() => {
+  const section = document.querySelector('.scroll-story');
+  const image = document.querySelector('#storyImage');
+  const title = document.querySelector('#storyImageTitle');
+  const index = document.querySelector('#storyImageIndex');
+  const steps = [...document.querySelectorAll('[data-story-step]')];
+  if (!section || !image || !steps.length) return;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const activate = step => {
+    steps.forEach(item => item.classList.toggle('active', item === step));
+    const nextSrc = step.dataset.image;
+    if (nextSrc && image.getAttribute('src') !== nextSrc) {
+      section.querySelector('.story-visual')?.classList.add('is-changing');
+      const preload = new Image();
+      preload.onload = () => {
+        image.src = nextSrc;
+        section.querySelector('.story-visual')?.classList.remove('is-changing');
+      };
+      preload.onerror = () => section.querySelector('.story-visual')?.classList.remove('is-changing');
+      preload.src = nextSrc;
+    }
+    if (title) title.textContent = step.dataset.title || '';
+    if (index) index.textContent = step.dataset.index || '';
+  };
+  if (!('IntersectionObserver' in window) || reducedMotion) return;
+  const observer = new IntersectionObserver(entries => {
+    const visible = entries.filter(entry => entry.isIntersecting)
+      .sort((a,b) => b.intersectionRatio-a.intersectionRatio)[0];
+    if (visible) activate(visible.target);
+  }, {rootMargin:'-35% 0px -35% 0px',threshold:[0,.15,.35,.6]});
+  steps.forEach(step => observer.observe(step));
+})();
