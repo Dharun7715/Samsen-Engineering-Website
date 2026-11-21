@@ -210,9 +210,33 @@ function escapeHtml(value) {
 })();
 
 
-/* Play only the video belonging to the active hero slide; pause inactive footage. */
-(()=>{const hero=document.querySelector('.hero-slider');if(!hero)return;const slides=[...hero.querySelectorAll('.slide')];const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;const sync=()=>{const active=slides.find(s=>s.classList.contains('active'));slides.forEach(s=>{const v=s.querySelector('.slide-video');if(!v)return;if(s===active&&!reduced){const p=v.play();if(p&&p.catch)p.catch(()=>{v.style.display='none'});}else v.pause();});};const obs=new MutationObserver(sync);slides.forEach(s=>obs.observe(s,{attributes:true,attributeFilter:['class']}));document.addEventListener('visibilitychange',()=>{if(document.hidden)slides.forEach(s=>s.querySelector('.slide-video')?.pause());else sync()});sync()})();
-
+/* Verified per-slide footage controller: play active video, fallback to image on any media error */
+(()=>{
+ const hero=document.querySelector('.hero-slider');if(!hero)return;
+ const slides=[...hero.querySelectorAll('.slide')];
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const sync=()=>{
+  const active=slides.find(s=>s.classList.contains('active'));
+  slides.forEach(s=>{
+   const v=s.querySelector('.slide-video');if(!v)return;
+   if(s!==active||reduced){v.pause();return;}
+   s.classList.remove('video-fallback');
+   v.style.display='block';
+   const p=v.play();
+   if(p&&p.catch)p.catch(()=>{s.classList.add('video-fallback')});
+  });
+ };
+ slides.forEach(s=>{
+  const v=s.querySelector('.slide-video');if(!v)return;
+  v.addEventListener('error',()=>s.classList.add('video-fallback'));
+  v.addEventListener('stalled',()=>{if(v.readyState<2)s.classList.add('video-fallback')});
+ });
+ const observer=new MutationObserver(sync);
+ slides.forEach(s=>observer.observe(s,{attributes:true,attributeFilter:['class']}));
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)slides.forEach(s=>s.querySelector('.slide-video')?.pause());else sync()});
+ sync();
+})();
+ 
 /* Accessible portfolio filters and image lightbox */
 (() => {
  const cards=[...document.querySelectorAll('.portfolio-image-card')];
