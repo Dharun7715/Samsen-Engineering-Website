@@ -648,3 +648,13 @@ body{background:#f4f3ef}
     background:linear-gradient(180deg,rgba(3,12,29,.82) 0%,rgba(3,12,29,.48) 45%,rgba(3,12,29,.12) 100%);
   }
 }
+
+
+/* Keep the full mobile hero photograph visible (no edge cropping) */
+@media(max-width:700px){
+  .slide:before{
+    background-size:100% auto!important;
+    background-position:center bottom 68px!important;
+    background-repeat:no-repeat!important;
+  }
+}
