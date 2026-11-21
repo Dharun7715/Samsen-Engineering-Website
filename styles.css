@@ -924,3 +924,50 @@ a,button,.service-card,.portfolio-image-card{transition-timing-function:cubic-be
  .premium-site .nav-links>a:hover{color:#e8c985}
  .premium-site .wrap{width:min(100% - 36px,1180px)}
 }
+
+
+/* SAMSEN SIGNATURE THEME — cinematic navy, warm gold, premium architecture */
+.premium-site{--red:#d8b875;--gold:#e5c887;--ink:#f0f3f8;--muted:#b8c4d4;--paper:#07142b;--line:rgba(216,184,117,.2);background:#07142b;color:#edf1f7}
+.premium-site .topline{background:#030b19;color:#e7edf6;border-bottom:1px solid rgba(216,184,117,.16)}
+.premium-site .site-header{background:rgba(5,16,35,.97);border-bottom:1px solid rgba(216,184,117,.2);box-shadow:0 10px 35px rgba(0,0,0,.22);backdrop-filter:blur(16px)}
+.premium-site .nav-links{color:#d3dbea}.premium-site .nav-links>a:hover,.premium-site .nav-links>a.active{color:#e8c985}
+.premium-site .nav-cta,.premium-site .button-gold{background:linear-gradient(135deg,#e7cb8d,#bd9857);color:#08152b;box-shadow:0 10px 28px rgba(216,184,117,.18)}
+.premium-site .nav-cta span,.premium-site .button-gold span{color:#08152b}.premium-site .nav-cta:hover,.premium-site .button-gold:hover{background:#f0dba9}
+.premium-site .eyebrow{color:#dfc184}.premium-site .eyebrow>span{background:#d8b875}
+.premium-site .welcome-band{background:linear-gradient(110deg,#b18a4d,#e0c184 50%,#9b773f);color:#08152b;border-block:1px solid rgba(255,255,255,.18)}
+.premium-site .welcome-band span,.premium-site .welcome-band p{color:#15233a}
+.premium-site .intro,.premium-site .proof-strip,.premium-site .services,.premium-site .projects,.premium-site .scroll-story,.premium-site .contact{background:linear-gradient(145deg,#0b1d3b 0%,#07142b 65%,#0b1b35 100%);color:#edf1f7}
+.premium-site .intro h2,.premium-site .section-heading h2,.premium-site .story-heading h2,.premium-site .contact h2,.premium-site .proof-heading h2{color:#f5f7fb}
+.premium-site .intro h2 em,.premium-site .section-heading h2 em,.premium-site .story-heading h2 em,.premium-site .contact h2 em,.premium-site .proof-heading h2 em{color:#e2c17d}
+.premium-site .intro-copy p,.premium-site .section-note,.premium-site .story-heading>p:last-child,.premium-site .contact-copy,.premium-site .proof-heading>p:last-child{color:#c1ccdc}
+.premium-site .values-strip,.premium-site .values-strip>div{border-color:rgba(216,184,117,.23)}
+.premium-site .values-strip strong,.premium-site .service-no,.premium-site .proof-label,.premium-site .panel-kicker,.premium-site .contact-method>span{color:#e3c17d}
+.premium-site .values-strip span{color:#d2dbea}
+.premium-site .service-card,.premium-site .proof-card,.premium-site .contact-panel{background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025));border:1px solid rgba(216,184,117,.23);color:#f2f5fa;box-shadow:0 18px 48px rgba(0,0,0,.2)}
+.premium-site .service-card h3,.premium-site .proof-card .proof-number,.premium-site .contact-panel h3{color:#f6f7fa}
+.premium-site .service-card p,.premium-site .proof-card small,.premium-site .contact-panel p{color:#c1ccdc}
+.premium-site .service-link,.premium-site .contact-method a{color:#f0d79f}
+.premium-site .service-card:hover{border-color:rgba(230,195,119,.7);transform:translateY(-6px);box-shadow:0 24px 55px rgba(0,0,0,.3)}
+.premium-site .project-preview-grid article{background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025));border:1px solid rgba(216,184,117,.24);color:#f4f6fa}
+.premium-site .project-preview-grid article>span{color:#e3c17d}.premium-site .project-preview-grid article p{color:#c1ccdc}
+.premium-site .story-step{border-color:rgba(216,184,117,.2)}.premium-site .story-step>span,.premium-site .story-kicker{color:#e4c47f}
+.premium-site .story-step h3{color:#f5f7fb}.premium-site .story-step p{color:#c3cede}
+.premium-site .statement{background:radial-gradient(ellipse at 80% 20%,rgba(38,71,112,.42),transparent 45%),linear-gradient(125deg,#030c1c,#0b1e3b 65%,#07142b);color:#fff;border-block:1px solid rgba(216,184,117,.22)}
+.premium-site .statement h2{color:#fff}.premium-site .statement h2 em{color:#e4c47f}
+.premium-site .contact-panel{backdrop-filter:blur(14px)}.premium-site .contact-address{color:#dce4ef!important}
+.premium-site .contact-actions a{border:1px solid rgba(216,184,117,.48);color:#f0d79f}
+.premium-site .contact-actions .contact-call,.premium-site .floating-call{background:linear-gradient(135deg,#e7cb8d,#bd9857);color:#08152b}
+.premium-site .footer,.premium-site .premium-footer{background:linear-gradient(135deg,#061329,#0b1d3b 55%,#030b19);border-top:1px solid rgba(216,184,117,.28);color:#eef2f8}
+.premium-site .footer-column h3{border-color:rgba(216,184,117,.35)}.premium-site .footer-column>a:hover,.premium-site .back-top{color:#e7ca8b}
+.premium-site .footer-bottom{border-color:rgba(216,184,117,.2);color:#aebbd0}
+.premium-site .projects-hero{background:linear-gradient(110deg,rgba(3,12,27,.94),rgba(8,27,53,.72)),url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2200&q=85') center/cover;color:#fff}
+.premium-site .projects-hero h1{color:#fff}.premium-site .projects-hero h1 em{color:#e4c47f}
+.premium-site .image-portfolio{background:linear-gradient(145deg,#0b1d3b,#07142b);color:#f5f7fb}
+.premium-site .portfolio-heading h2{color:#f5f7fb}.premium-site .portfolio-heading h2 em{color:#e4c47f}
+.premium-site .portfolio-image-card{border:1px solid rgba(216,184,117,.28);box-shadow:0 18px 45px rgba(0,0,0,.28)}
+.premium-site .portfolio-image-card figcaption{background:linear-gradient(0deg,rgba(3,12,27,.95),rgba(3,12,27,.12));color:#fff}
+.premium-site .portfolio-image-card figcaption span{color:#e4c47f}.premium-site .portfolio-note{color:#aebbd0}
+.premium-site .project-contact-strip{background:linear-gradient(115deg,#0b1d3b,#061329);color:#fff;border-top:1px solid rgba(216,184,117,.2)}
+.premium-site .project-contact-strip h2{color:#fff}.premium-site .project-contact-strip h2 em{color:#e4c47f}
+.premium-site .footer-main p{color:#c1ccdc}.premium-site ::selection{background:#d8b875;color:#07142b}
+@media(max-width:700px){.premium-site .site-header{background:rgba(5,16,35,.98)}.premium-site .nav-links{background:#07142b;border:1px solid rgba(216,184,117,.24);box-shadow:0 18px 35px rgba(0,0,0,.35)}.premium-site .nav-links>a:not(.nav-cta){color:#e2e8f1;border-color:rgba(216,184,117,.14)}.premium-site .wrap{width:min(100% - 36px,1180px)}}
