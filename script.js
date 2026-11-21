@@ -194,3 +194,57 @@ function escapeHtml(value) {
     image.src = url;
   });
 })();
+
+
+/* Interactive 3D building controls — pointer, touch and keyboard accessible */
+(() => {
+  const stage=document.querySelector('.model-stage');
+  const model=document.querySelector('.building-model');
+  const reset=document.querySelector('.model-reset');
+  if(!stage||!model)return;
+  let rotationX=-13,rotationY=-32,startX=0,startY=0,baseX=rotationX,baseY=rotationY,dragging=false;
+  const render=()=>{model.style.transform='rotateX('+rotationX+'deg) rotateY('+rotationY+'deg)'};
+  const clamp=(v,min,max)=>Math.min(max,Math.max(min,v));
+  stage.addEventListener('pointerdown',event=>{
+    if(event.target.closest('button'))return;
+    dragging=true;startX=event.clientX;startY=event.clientY;baseX=rotationX;baseY=rotationY;
+    stage.classList.add('is-dragging');stage.setPointerCapture?.(event.pointerId);
+  });
+  stage.addEventListener('pointermove',event=>{
+    if(!dragging)return;
+    rotationY=baseY+(event.clientX-startX)*.55;
+    rotationX=clamp(baseX-(event.clientY-startY)*.35,-38,18);
+    render();
+  });
+  const stop=()=>{dragging=false;stage.classList.remove('is-dragging')};
+  stage.addEventListener('pointerup',stop);stage.addEventListener('pointercancel',stop);stage.addEventListener('lostpointercapture',stop);
+  stage.addEventListener('keydown',event=>{
+    const step=event.shiftKey?15:7;
+    if(event.key==='ArrowLeft')rotationY-=step;
+    else if(event.key==='ArrowRight')rotationY+=step;
+    else if(event.key==='ArrowUp')rotationX=clamp(rotationX-step,-38,18);
+    else if(event.key==='ArrowDown')rotationX=clamp(rotationX+step,-38,18);
+    else return;
+    event.preventDefault();render();
+  });
+  reset?.addEventListener('click',()=>{rotationX=-13;rotationY=-32;render()});
+  render();
+})();
+
+/* Reveal the new statistics cards when visible */
+(() => {
+ const cards=document.querySelectorAll('.proof-card');
+ if(!('IntersectionObserver'in window)){cards.forEach(card=>card.classList.add('is-visible'));return}
+ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+   if(!entry.isIntersecting)return;
+   const el=entry.target.querySelector('[data-count]');
+   if(el&&!el.dataset.done){
+     el.dataset.done='1';const target=Number(el.dataset.count);const start=performance.now();
+     const duration=1200;
+     const tick=now=>{const progress=Math.min((now-start)/duration,1);el.textContent=String(Math.round(target*(1-Math.pow(1-progress,3))))+(el.dataset.suffix||'');if(progress<1)requestAnimationFrame(tick)};
+     requestAnimationFrame(tick);
+   }
+   observer.unobserve(entry.target);
+ }),{threshold:.35});
+ cards.forEach(card=>observer.observe(card));
+})();
