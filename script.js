@@ -2,11 +2,21 @@ const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.nav-links');
 menuButton?.addEventListener('click', () => {
   const isOpen = navigation.classList.toggle('open');
+  document.body.classList.toggle('menu-open', isOpen);
   menuButton.setAttribute('aria-expanded', String(isOpen));
   menuButton.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
 });
+document.addEventListener('keydown', event => {
+  if (event.key !== 'Escape' || !navigation?.classList.contains('open')) return;
+  navigation.classList.remove('open');
+  document.body.classList.remove('menu-open');
+  menuButton?.setAttribute('aria-expanded', 'false');
+  menuButton?.setAttribute('aria-label', 'Open navigation');
+  menuButton?.focus();
+});
 document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => {
   navigation.classList.remove('open');
+  document.body.classList.remove('menu-open');
   menuButton?.setAttribute('aria-expanded', 'false');
   menuButton?.setAttribute('aria-label', 'Open navigation');
 }));
@@ -179,19 +189,41 @@ function escapeHtml(value) {
 })();
 
 
-/* Preload hero backgrounds before starting the carousel to avoid black flashes */
+/* Mobile-aware hero loading: load the first image immediately, then the next slide only.
+   Remaining slides are fetched when the visitor advances, avoiding five simultaneous downloads. */
 (() => {
   const heroSlides = [...document.querySelectorAll('.hero-slider .slide')];
   if (!heroSlides.length) return;
-  const imageUrls = heroSlides.map(slide => {
+  const getUrl = slide => {
     const value = getComputedStyle(slide).getPropertyValue('--slide-image').trim();
     const match = value.match(/^url\(["']?(.*?)["']?\)$/);
     return match ? match[1] : '';
-  }).filter(Boolean);
-  imageUrls.forEach(url => {
+  };
+  const loaded = new Set();
+  const loadSlide = index => {
+    const slide = heroSlides[(index + heroSlides.length) % heroSlides.length];
+    const url = getUrl(slide);
+    if (!url || loaded.has(url)) return;
+    loaded.add(url);
     const image = new Image();
     image.decoding = 'async';
     image.src = url;
+  };
+  loadSlide(0);
+  if (heroSlides.length > 1) loadSlide(1);
+  heroSlides.forEach((slide, index) => {
+    const activate = () => {
+      loadSlide(index);
+      loadSlide(index + 1);
+    };
+    slide.addEventListener('transitionstart', activate, {once:true});
+  });
+  document.querySelectorAll('.slider-dot,.slider-prev,.slider-next').forEach(control => {
+    control.addEventListener('click', () => {
+      const active = heroSlides.findIndex(slide => slide.classList.contains('active'));
+      loadSlide(active);
+      loadSlide(active + 1);
+    }, {passive:true});
   });
 })();
 
