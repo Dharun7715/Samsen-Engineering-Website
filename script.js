@@ -137,3 +137,22 @@ function escapeHtml(value) {
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[character]));
 }
+
+/* Portfolio category filters */
+(() => {
+  const filters = [...document.querySelectorAll('.gallery-filter')];
+  const gallery = document.querySelector('#projectGallery');
+  if (!filters.length || !gallery) return;
+  filters.forEach(button => button.addEventListener('click', () => {
+    const category = button.dataset.filter || 'all';
+    filters.forEach(item => {
+      const active = item === button;
+      item.classList.toggle('active', active);
+      item.setAttribute('aria-pressed', String(active));
+    });
+    gallery.querySelectorAll('.project').forEach(card => {
+      const matches = category === 'all' || card.dataset.category === category;
+      card.hidden = !matches;
+    });
+  }));
+})();
