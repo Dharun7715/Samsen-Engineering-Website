@@ -2363,3 +2363,15 @@ body.premium-site .samsen-stats-intro strong{color:#fff!important}body.premium-s
 .service-index-card:hover img{transform:scale(1.04);opacity:.34}
 @media(max-width:900px){.nav-dropdown{display:block}.nav-dropdown-menu{position:static;display:none;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;border-left:1px solid rgba(227,201,143,.5);border-radius:0;margin:4px 0 8px 12px;padding:0 0 0 8px;background:transparent}.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{display:block}.nav-dropdown-menu:before{display:none}.service-detail-layout,.service-detail-layout.reverse{grid-template-columns:1fr;gap:25px}.service-detail-layout.reverse .service-detail-image{order:0}.service-detail-image{height:340px}}
 @media(max-width:650px){.service-hero{min-height:490px}.service-hero-content{padding-top:78px;padding-bottom:78px}.service-hero h1,.service-index-hero h1{font-size:clamp(42px,12vw,62px);letter-spacing:-2px}.service-detail-section{padding:58px 0}.service-detail-image{height:245px}.service-detail-copy{font-size:14px}.service-extra-grid,.service-index-grid .wrap{grid-template-columns:1fr}.service-extra-grid article{min-height:115px}.service-cta .wrap{align-items:flex-start;flex-direction:column}.service-index-hero{padding:75px 0}}
+
+
+/* ABOUT US — premium custom quality medallion */
+.about-quality-grid{grid-template-columns:minmax(0,1.15fr) minmax(330px,.85fr)!important;gap:clamp(30px,5vw,76px)!important}
+.quality-seal{padding:10px!important;position:relative;isolation:isolate}
+.quality-seal:before{content:"";position:absolute;width:78%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(227,201,143,.23),rgba(227,201,143,0) 68%);filter:blur(12px);z-index:-1}
+.quality-seal-frame{width:min(100%,430px);margin:auto;text-align:center;position:relative}
+.quality-seal-frame:before{content:"";position:absolute;inset:7% 7% 18%;border:1px solid rgba(177,139,77,.38);border-radius:50%;pointer-events:none}
+.quality-seal-frame img{display:block;width:100%;height:auto;filter:drop-shadow(0 18px 22px rgba(23,35,52,.17))}
+.quality-seal-caption{display:block;margin-top:-5px;color:#8e6a32;font:800 9px "DM Sans",sans-serif;letter-spacing:2.8px}
+@media(max-width:900px){.about-quality-grid{grid-template-columns:1fr!important}.quality-seal-frame{max-width:360px}}
+@media(max-width:600px){.quality-seal-frame{max-width:310px}.quality-seal-caption{font-size:8px;letter-spacing:1.8px}}
