@@ -2574,3 +2574,20 @@ body.premium-site .enquiry-note{margin:0!important;color:#9eacbf!important;font-
 @media(prefers-reduced-motion:reduce){
  [data-reveal],body.projects-page .samsen-project-card{transition:none!important;transform:none!important;opacity:1!important}
 }
+
+
+/* PROJECT TABLE READABILITY — dark text on light table cells */
+body.projects-page .samsen-project-content th,
+body.projects-page .samsen-project-content td{
+  color:#17243a!important;
+  background:#f8f7f3!important;
+  border:1px solid #dedbd2!important;
+}
+body.projects-page .samsen-project-content th{
+  color:#27364d!important;
+  font-weight:700!important;
+}
+body.projects-page .samsen-project-content td{
+  color:#17243a!important;
+  font-weight:500!important;
+}
