@@ -2375,3 +2375,23 @@ body.premium-site .samsen-stats-intro strong{color:#fff!important}body.premium-s
 .quality-seal-caption{display:block;margin-top:-5px;color:#8e6a32;font:800 9px "DM Sans",sans-serif;letter-spacing:2.8px}
 @media(max-width:900px){.about-quality-grid{grid-template-columns:1fr!important}.quality-seal-frame{max-width:360px}}
 @media(max-width:600px){.quality-seal-frame{max-width:310px}.quality-seal-caption{font-size:8px;letter-spacing:1.8px}}
+
+
+/* ABOUT US — typography aligned with the site's Manrope + DM Sans system */
+body.about-page{font-family:"DM Sans",Arial,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body.about-page :is(h1,h2,h3,h4,.about-image-caption strong){font-family:"Manrope",Arial,sans-serif;letter-spacing:-.035em}
+body.about-page .about-profile-copy p,
+body.about-page .about-quality-copy p,
+body.about-page .about-person-copy p,
+body.about-page .about-person-copy li{font-family:"DM Sans",Arial,sans-serif;font-size:14px;line-height:1.9;letter-spacing:0;color:#4b596d}
+body.about-page .about-pillar p,
+body.about-page .about-pillar li{font-family:"DM Sans",Arial,sans-serif;font-size:12px;line-height:1.85;letter-spacing:.045em}
+body.about-page .about-profile-copy h3{font-size:22px;font-weight:800;letter-spacing:.025em}
+body.about-page .about-section-title h2{font-size:clamp(28px,3.2vw,42px);font-weight:800;letter-spacing:-.045em}
+body.about-page .about-quality-copy h2{font-size:clamp(32px,4vw,46px);font-weight:800;letter-spacing:-.05em}
+body.about-page .about-person-copy h3{font-size:21px;font-weight:800;letter-spacing:-.035em}
+body.about-page .about-person-copy h4{font-family:"DM Sans",Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:.035em}
+body.about-page .about-commit h3{font-size:18px;font-weight:800;letter-spacing:.04em}
+body.about-page .about-end h2{font-weight:800;letter-spacing:-.055em}
+body.about-page .about-quality-copy li{font-family:"DM Sans",Arial,sans-serif;font-size:14px;line-height:1.8}
+body.about-page .quality-seal-frame img{image-rendering:auto}
