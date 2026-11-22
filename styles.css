@@ -2460,3 +2460,28 @@ body.about-page .about-hero h1 em{font-size:1em!important;line-height:1.05!impor
  body.about-page .about-hero h1{font-size:clamp(30px,8vw,46px)!important;line-height:1.06!important;letter-spacing:-.04em!important}
  body.about-page .about-hero h1 em{font-size:1em!important;line-height:1.08!important}
 }
+
+
+/* ABOUT HERO — match the supplied clean sans + italic serif typography, without enlarging */
+body.about-page .about-hero h1{
+  font-family:"Manrope",Arial,sans-serif!important;
+  font-size:clamp(38px,6vw,76px)!important;
+  font-weight:500!important;
+  line-height:1.04!important;
+  letter-spacing:-.055em!important;
+  text-transform:none!important;
+}
+body.about-page .about-hero h1 em{
+  display:inline-block!important;
+  font-family:"Bodoni Moda","Playfair Display",Georgia,serif!important;
+  font-size:1em!important;
+  font-style:italic!important;
+  font-weight:600!important;
+  line-height:1.05!important;
+  letter-spacing:-.045em!important;
+  color:#e3b64f!important;
+}
+@media(max-width:700px){
+  body.about-page .about-hero h1{font-size:clamp(30px,8vw,46px)!important;line-height:1.06!important;letter-spacing:-.045em!important}
+  body.about-page .about-hero h1 em{font-size:1em!important;line-height:1.08!important}
+}
