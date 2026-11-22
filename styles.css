@@ -2395,3 +2395,38 @@ body.about-page .about-commit h3{font-size:18px;font-weight:800;letter-spacing:.
 body.about-page .about-end h2{font-weight:800;letter-spacing:-.055em}
 body.about-page .about-quality-copy li{font-family:"DM Sans",Arial,sans-serif;font-size:14px;line-height:1.8}
 body.about-page .quality-seal-frame img{image-rendering:auto}
+
+/* MOBILE NAV — make Services row full-width, readable and vertically aligned */
+@media(max-width:900px){
+  body.premium-site .nav-links .nav-dropdown{
+    display:block!important;width:100%!important;flex:0 0 auto!important;
+    margin:0!important;padding:0!important;border-bottom:1px solid rgba(216,184,117,.16);
+  }
+  body.premium-site .nav-links .nav-dropdown>a{
+    display:flex!important;width:100%!important;min-height:54px!important;
+    box-sizing:border-box!important;align-items:center!important;justify-content:space-between!important;
+    padding:12px 4px!important;margin:0!important;
+    color:#f5f6f9!important;font-family:"DM Sans",Arial,sans-serif!important;
+    font-size:16px!important;font-weight:700!important;line-height:1.35!important;
+    letter-spacing:0!important;text-align:left!important;
+  }
+  body.premium-site .nav-links .nav-dropdown .nav-caret{font-size:17px!important;line-height:1!important;margin-left:12px}
+  body.premium-site .nav-links .nav-dropdown-menu{
+    width:calc(100% - 8px)!important;box-sizing:border-box!important;
+    margin:0 0 12px 8px!important;padding:4px 0 4px 12px!important;
+    border-left:1px solid rgba(227,201,143,.55)!important;
+  }
+  body.premium-site .nav-links .nav-dropdown-menu a{
+    display:flex!important;align-items:center!important;min-height:46px!important;
+    padding:10px 12px!important;font-size:14px!important;font-weight:600!important;
+    line-height:1.45!important;white-space:normal!important;
+  }
+}
+@media(max-width:700px){
+  body.about-page .about-quality-grid{grid-template-columns:minmax(0,1fr)!important;gap:28px!important}
+  body.about-page .quality-seal{width:100%!important;min-width:0!important;padding:0!important}
+  body.about-page .quality-seal-frame{width:min(100%,340px)!important;margin:0 auto!important}
+  body.about-page .quality-seal-frame:before{display:none!important}
+  body.about-page .quality-seal-frame img{width:100%!important;height:auto!important;display:block!important;filter:none!important}
+  body.about-page .quality-seal-caption{margin:5px 0 0!important;text-align:center!important;font-size:9px!important;line-height:1.6!important;letter-spacing:1.5px!important}
+}
