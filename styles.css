@@ -2591,3 +2591,39 @@ body.projects-page .samsen-project-content td{
   color:#17243a!important;
   font-weight:500!important;
 }
+
+
+/* CHAMPAGNE GOLD PROJECT LABELS — legible on the light table cells */
+body.projects-page .samsen-project-content th{
+  color:#9a702c!important;
+  background:#f5ead0!important;
+  border-color:#e2d2ad!important;
+  font-weight:800!important;
+}
+body.projects-page .samsen-project-content td{
+  color:#17243a!important;
+  background:#fff!important;
+  border-color:#e5dfd2!important;
+}
+
+/* PERFORMANCE PASS — reduce costly paint effects while preserving the design */
+.site-header,.premium-site .site-header,.slide-caption,.slider-arrows button,
+.why-cinematic-card,.premium-site .contact-panel,.premium-site .nav-links{
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+}
+.why-cinematic-card{box-shadow:0 8px 22px rgba(0,0,0,.12)!important}
+body.projects-page .samsen-project-card{box-shadow:0 8px 20px rgba(7,20,43,.08)!important}
+body.projects-page .samsen-project-card:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(7,20,43,.12)!important}
+.hero-slider .slide:before{animation:none!important;transition:opacity .45s ease!important;transform:scale(1.025)!important}
+.hero-slider .slide.active:before{transform:scale(1.025)!important}
+.hero-slider .slide-content{animation-duration:.55s!important}
+[data-reveal]{transition:opacity .42s ease,transform .42s ease!important}
+@media(max-width:760px){
+  .why-cinematic-card,body.projects-page .samsen-project-card{box-shadow:none!important}
+  .hero-slider .slide:before{transform:scale(1.01)!important}
+  [data-reveal]{transition:opacity .3s ease,transform .3s ease!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-slider .slide:before,.hero-slider .slide-content,[data-reveal]{animation:none!important;transition:none!important}
+}
