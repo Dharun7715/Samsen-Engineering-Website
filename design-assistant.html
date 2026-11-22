@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07142b">
+<meta name="description" content="Explore a personalised building or interior concept with the Samsen Design Assistant.">
+<title>Design Assistant | Samsen Engineering Contractor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css?v=design-assistant-20261122">
+<style>
+.da-page{background:#f7f7f4;color:#15233b;min-height:100vh}.da-hero{background:radial-gradient(circle at 82% 18%,rgba(227,201,143,.18),transparent 30%),linear-gradient(125deg,#07142b,#142b4b 70%,#263b58);color:#fff;padding:86px 0 72px;position:relative;overflow:hidden}.da-hero:after{content:"";position:absolute;right:-90px;bottom:-220px;width:520px;height:520px;border:1px solid rgba(227,201,143,.24);border-radius:50%;box-shadow:0 0 0 34px rgba(227,201,143,.035),0 0 0 70px rgba(227,201,143,.025)}.da-hero-inner,.da-main{width:min(1120px,calc(100% - 40px));margin:auto;position:relative;z-index:1}.da-kicker{color:#e3c98f;letter-spacing:3px;text-transform:uppercase;font-size:11px;font-weight:800}.da-hero h1{font:600 clamp(38px,6vw,66px)/1.04 Manrope,Arial,sans-serif;letter-spacing:-2px;max-width:780px;margin:18px 0}.da-hero h1 em{font-family:Georgia,serif;color:#e3c98f;font-weight:500}.da-hero p{max-width:650px;color:#d5deeb;line-height:1.8;font-size:16px}.da-main{padding:54px 0 90px}.da-intro{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:24px}.da-intro h2{font:700 26px Manrope;margin:0 0 8px;color:#10213d}.da-intro p{margin:0;color:#647187;line-height:1.6}.da-note{font-size:12px;color:#7c6840;background:#f3ead6;border:1px solid #e5d4ae;border-radius:999px;padding:9px 13px;white-space:nowrap}.da-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(300px,.75fr);gap:24px;align-items:start}.da-form,.da-result{background:#fff;border:1px solid #e6e1d7;border-radius:18px;box-shadow:0 14px 42px rgba(13,29,55,.06)}.da-form{padding:28px}.da-result{padding:26px;position:sticky;top:105px;background:linear-gradient(160deg,#fff,#faf8f2)}.da-step{display:flex;align-items:center;gap:10px;margin:0 0 20px;color:#9a762f;font-size:11px;letter-spacing:2px;font-weight:800;text-transform:uppercase}.da-step:after{content:"";height:1px;background:#e8dfce;flex:1}.da-field{margin:0 0 22px}.da-field label,.da-label{display:block;font-weight:700;font-size:13px;color:#1a2a44;margin:0 0 9px}.da-field small{display:block;color:#7c8798;font-size:12px;margin-top:7px}.da-field input,.da-field select,.da-field textarea{width:100%;border:1px solid #d9dee6;border-radius:9px;background:#fff;padding:13px 14px;font:14px 'DM Sans',Arial;color:#182941;outline:none}.da-field input:focus,.da-field select:focus,.da-field textarea:focus{border-color:#b28a42;box-shadow:0 0 0 3px rgba(227,201,143,.2)}.da-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.da-option{display:flex;align-items:center;gap:9px;border:1px solid #e2e4e8;border-radius:9px;padding:11px 12px;cursor:pointer;font-size:13px;color:#34445c;min-height:46px}.da-option:has(input:checked){border-color:#bd984e;background:#fbf6e9;color:#15233b}.da-option input{accent-color:#a77c32}.da-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}.da-btn{border:0;border-radius:9px;background:#b38a43;color:#101f37;padding:13px 19px;font-weight:800;cursor:pointer}.da-btn.secondary{background:#edf0f4;color:#263650}.da-result h3{font:700 21px Manrope;margin:0 0 8px;color:#10213d}.da-result>p{color:#66748a;font-size:13px;line-height:1.65;margin:0 0 20px}.da-placeholder{border:1px dashed #d8d0bf;border-radius:12px;padding:25px 18px;text-align:center;color:#778398;font-size:13px;line-height:1.7}.da-placeholder b{display:block;color:#9a762f;font:700 13px Manrope;margin-bottom:8px}.da-output{display:none}.da-output.show{display:block}.da-block{border-top:1px solid #e8e1d4;padding:15px 0}.da-block h4{margin:0 0 7px;color:#9a762f;font-size:11px;letter-spacing:1.4px;text-transform:uppercase}.da-block p,.da-block li{font-size:13px;line-height:1.7;color:#34445c}.da-block p{margin:0}.da-block ul{margin:0;padding-left:18px}.da-disclaimer{background:#f5f0e5;border-radius:10px;padding:12px;color:#6e5a35;font-size:11px;line-height:1.6;margin-top:14px}.da-bottom{margin-top:25px;text-align:center;color:#7a8493;font-size:12px;line-height:1.7}.da-bottom a{color:#916d2f;text-decoration:underline}.da-menu-link{color:#e3c98f!important}
+@media(max-width:800px){.da-layout{grid-template-columns:1fr}.da-result{position:static}.da-intro{display:block}.da-note{display:inline-block;margin-top:13px}.da-hero{padding:64px 0 56px}.da-form{padding:20px}.da-result{padding:21px}}
+@media(max-width:480px){.da-options{grid-template-columns:1fr}.da-hero-inner,.da-main{width:calc(100% - 28px)}.da-hero h1{letter-spacing:-1.2px}.da-main{padding-top:35px}}
+</style>
+</head>
+<body class="premium-site da-page">
+<div class="topline"><span class="topline-dot"></span> BUILDING TRUST. SHAPING TOMORROW. <span class="topline-right">EAST TAMBARAM · CHENNAI</span></div>
+<header class="site-header">
+<a class="brand" href="index.html" aria-label="Samsen Engineering Contractor"><img decoding="async" src="logo.svg" alt="Samsen Engineering Contractor"></a>
+<button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+<nav class="nav-links" aria-label="Main navigation"><a href="index.html#home">Home</a><a href="about.html">About Us</a><div class="nav-dropdown"><a href="services.html">Services <span class="nav-caret">⌄</span></a><div class="nav-dropdown-menu"><a href="civil-construction.html">Civil Construction</a><a href="interior-work.html">Interior Work</a><a href="layout-developer.html">Layout Developer</a><a href="real-estate-marketing.html">Real Estate &amp; Marketing</a></div></div><a href="projects.html">Our Projects</a><a href="gallery.html">Gallery</a><a href="index.html#contact">Contact</a><a class="nav-cta da-menu-link" href="design-assistant.html">Design Assistant ↗</a></nav>
+</header>
+<section class="da-hero"><div class="da-hero-inner"><div class="da-kicker">A smarter way to start planning</div><h1>Imagine your space.<br><em>Shape your vision.</em></h1><p>Tell us what you have in mind. Build a clear starting concept for your home, commercial space or interiors — then share it with the Samsen team.</p></div></section>
+<main class="da-main">
+<div class="da-intro"><div><h2>Your design brief</h2><p>A few details help us shape a more useful first direction.</p></div><span class="da-note">No sign-up required</span></div>
+<div class="da-layout">
+<form class="da-form" id="designForm">
+<div class="da-step">01 / Project basics</div>
+<div class="da-field"><label for="projectType">What are you planning?</label><select id="projectType" required><option value="">Choose project type</option><option>Independent house</option><option>Apartment</option><option>Villa</option><option>Commercial building</option><option>Office space</option><option>Interior renovation</option><option>Full home interiors</option><option>Plot layout development</option></select></div>
+<div class="da-field"><label for="area">Approximate built-up area / plot size</label><input id="area" placeholder="e.g. 1,800 sq. ft. or 30 × 50 ft."></div>
+<div class="da-field"><label for="floors">Number of floors</label><select id="floors"><option>Single floor</option><option>Ground + 1</option><option>Ground + 2</option><option>Ground + 3 or more</option><option>Not decided yet</option></select></div>
+<div class="da-step">02 / Look and feel</div>
+<div class="da-field"><span class="da-label">Which style do you like?</span><div class="da-options">
+<label class="da-option"><input type="radio" name="style" value="Modern and minimal" checked> Modern &amp; minimal</label>
+<label class="da-option"><input type="radio" name="style" value="Contemporary luxury"> Contemporary luxury</label>
+<label class="da-option"><input type="radio" name="style" value="Traditional and warm"> Traditional &amp; warm</label>
+<label class="da-option"><input type="radio" name="style" value="Functional and budget-conscious"> Functional &amp; practical</label>
+</div></div>
+<div class="da-field"><label for="budget">Indicative budget range</label><select id="budget"><option>Prefer to discuss</option><option>Below ₹25 lakhs</option><option>₹25–50 lakhs</option><option>₹50 lakhs–₹1 crore</option><option>₹1–2 crores</option><option>Above ₹2 crores</option></select></div>
+<div class="da-step">03 / Your priorities</div>
+<div class="da-field"><span class="da-label">What matters most? (Choose any)</span><div class="da-options">
+<label class="da-option"><input type="checkbox" name="priority" value="Natural light and ventilation"> Natural light</label>
+<label class="da-option"><input type="checkbox" name="priority" value="Space-efficient planning"> Space efficiency</label>
+<label class="da-option"><input type="checkbox" name="priority" value="Premium materials and finishes"> Premium finishes</label>
+<label class="da-option"><input type="checkbox" name="priority" value="Low-maintenance materials"> Easy maintenance</label>
+<label class="da-option"><input type="checkbox" name="priority" value="Vastu considerations"> Vastu considerations</label>
+<label class="da-option"><input type="checkbox" name="priority" value="Sustainable and energy-conscious choices"> Sustainable choices</label>
+</div></div>
+<div class="da-field"><label for="notes">Anything else we should know?</label><textarea id="notes" rows="3" placeholder="Rooms required, site conditions, preferred materials, special needs..."></textarea></div>
+<div class="da-field"><label for="location">Project location</label><input id="location" placeholder="e.g. Tambaram, Chennai"></div>
+<div class="da-actions"><button class="da-btn" type="submit">Build my concept ↗</button><button class="da-btn secondary" type="reset" id="resetForm">Reset</button></div>
+</form>
+<aside class="da-result" aria-live="polite"><h3>Your concept direction</h3><p>Once you complete the brief, a structured starting direction will appear here.</p><div class="da-placeholder" id="placeholder"><b>YOUR SPACE, YOUR WAY</b>Choose your project type and preferences, then select “Build my concept”.</div><div class="da-output" id="output"><div class="da-block"><h4>Project snapshot</h4><p id="snapshot"></p></div><div class="da-block"><h4>Suggested direction</h4><p id="direction"></p></div><div class="da-block"><h4>Planning priorities</h4><ul id="priorityList"></ul></div><div class="da-block"><h4>Discuss with our team</h4><p id="discussion"></p></div><div class="da-disclaimer">This is an initial planning prompt, not an architectural design, structural recommendation, quotation or approved cost estimate. Final feasibility, drawings, materials and pricing require discussion with qualified professionals and site review.</div><div class="da-actions"><a class="da-btn" id="emailBrief" href="#">Send this brief to Samsen ↗</a></div></div></aside>
+</div>
+<div class="da-bottom">Want to speak directly? Call <a href="tel:+917200472004">+91 72004 72004</a> or email <a href="mailto:samsenengg@gmail.com">samsenengg@gmail.com</a>.<br>Concept suggestions are generated locally from your selections; this first version does not connect to a live AI model.</div>
+</main>
+<script>
+const form=document.getElementById('designForm');
+const output=document.getElementById('output');
+const placeholder=document.getElementById('placeholder');
+form.addEventListener('submit',event=>{
+ event.preventDefault();
+ const type=document.getElementById('projectType').value;
+ if(!type){document.getElementById('projectType').focus();return;}
+ const area=document.getElementById('area').value.trim()||'To be confirmed';
+ const floors=document.getElementById('floors').value;
+ const style=form.querySelector('input[name="style"]:checked').value;
+ const budget=document.getElementById('budget').value;
+ const location=document.getElementById('location').value.trim()||'To be confirmed';
+ const notes=document.getElementById('notes').value.trim()||'No additional notes';
+ const priorities=[...form.querySelectorAll('input[name="priority"]:checked')].map(x=>x.value);
+ const isInterior=/interior/i.test(type);
+ const isCommercial=/commercial|office/i.test(type);
+ let direction='';
+ if(isInterior) direction=style==='Traditional and warm'?'Consider a warm, layered interior with tactile finishes, balanced lighting and practical storage.':'Explore a cohesive interior palette with clear circulation, layered lighting, purposeful storage and durable finishes.';
+ else if(isCommercial) direction='Start with user movement, functional zoning, daylight, services coordination and a clear visitor experience. Keep the layout adaptable for future needs.';
+ else direction=style==='Traditional and warm'?'Explore a welcoming elevation with familiar proportions, shaded openings, practical room relationships and durable finishes.':style==='Contemporary luxury'?'Explore a refined contemporary massing, balanced façade materials, generous daylight and carefully planned indoor-outdoor transitions.':style==='Functional and budget-conscious'?'Prioritise a compact circulation plan, efficient structural grid, standardised openings and phased finish selections.':'Explore clean massing, efficient circulation, cross-ventilation and a restrained material palette.';
+ const base=priorities.length?priorities:['Functional room planning','Natural light and ventilation'];
+ document.getElementById('snapshot').textContent=type+' · '+area+' · '+floors+' · '+location+' · Budget: '+budget;
+ document.getElementById('direction').textContent=direction+' Preferred style: '+style+'.';
+ const list=document.getElementById('priorityList');list.replaceChildren();
+ base.forEach(item=>{const li=document.createElement('li');li.textContent=item;list.appendChild(li)});
+ document.getElementById('discussion').textContent='Review the site dimensions and orientation, confirm room or operational requirements, discuss a preliminary layout, and shortlist materials. Additional notes: '+notes;
+ const body=['SAMSEN DESIGN BRIEF','Project: '+type,'Area: '+area,'Floors: '+floors,'Style: '+style,'Budget: '+budget,'Location: '+location,'Priorities: '+base.join(', '),'Additional notes: '+notes,'','Please contact me to discuss feasibility and next steps.'].join('\n');
+ document.getElementById('emailBrief').href='mailto:samsenengg@gmail.com?subject='+encodeURIComponent('Samsen Design Enquiry – '+type)+'&body='+encodeURIComponent(body);
+ placeholder.hidden=true;output.classList.add('show');
+});
+document.getElementById('resetForm').addEventListener('click',()=>{placeholder.hidden=false;output.classList.remove('show')});
+</script>
+<script src="script.js?v=design-assistant-20261122" defer></script>
+</body></html>
