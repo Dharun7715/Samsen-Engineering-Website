@@ -2130,3 +2130,22 @@ body.premium-site .projects-hero h1 em,
 body.premium-site .portfolio-image-card figcaption span{
  color:var(--samsen-soft-gold)!important;
 }
+
+
+/* PROJECTS PAGE — detailed project profiles */
+.samsen-projects-detail{background:#f7f6f2;color:#102344}
+.samsen-projects-detail .portfolio-heading{margin-bottom:38px}
+.samsen-project-intro{color:#657083;max-width:620px;margin-top:12px}
+.samsen-project-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.samsen-project-card{position:relative;display:grid;grid-template-columns:74px minmax(0,1fr);gap:20px;padding:30px 26px;background:#fff;border:1px solid rgba(190,160,100,.5);border-radius:14px;box-shadow:0 8px 24px rgba(16,35,68,.045);min-width:0}
+.samsen-project-index{font-family:Manrope,sans-serif;font-size:25px;font-weight:800;color:#102344;letter-spacing:-1px}
+.samsen-project-index span{display:block;margin-top:9px;font-size:9px;line-height:1.5;letter-spacing:1.2px;color:#b99b61;font-weight:800}
+.samsen-project-content{min-width:0}
+.samsen-project-content h2{font-family:Manrope,sans-serif;font-size:19px;line-height:1.35;color:#102344;margin:0 0 20px;font-weight:800}
+.samsen-project-content table{width:100%;border-collapse:collapse;font-family:"DM Sans",sans-serif;font-size:13px;line-height:1.6}
+.samsen-project-content th,.samsen-project-content td{padding:11px 12px;text-align:left;vertical-align:top;border:1px solid #e6e3dc;overflow-wrap:anywhere}
+.samsen-project-content th{width:43%;font-weight:700;color:#a47b39;background:#f7f5f0}
+.samsen-project-content td{color:#27364d;background:#fff}
+.samsen-project-wide{grid-column:1/-1}
+.samsen-project-wide .samsen-project-content table{max-width:850px}
+@media(max-width:760px){.samsen-project-list{grid-template-columns:1fr;gap:16px}.samsen-project-card{grid-template-columns:48px minmax(0,1fr);gap:12px;padding:22px 16px}.samsen-project-index{font-size:21px}.samsen-project-content h2{font-size:16px}.samsen-project-content table{font-size:12px}.samsen-project-content th,.samsen-project-content td{padding:9px 8px}.samsen-project-wide{grid-column:auto}}
