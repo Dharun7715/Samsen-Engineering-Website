@@ -2430,3 +2430,13 @@ body.about-page .quality-seal-frame img{image-rendering:auto}
   body.about-page .quality-seal-frame img{width:100%!important;height:auto!important;display:block!important;filter:none!important}
   body.about-page .quality-seal-caption{margin:5px 0 0!important;text-align:center!important;font-size:9px!important;line-height:1.6!important;letter-spacing:1.5px!important}
 }
+
+
+/* ABOUT HERO — editorial display typography inspired by the supplied reference */
+body.about-page .about-hero-content{max-width:1320px}
+body.about-page .about-hero h1{max-width:1100px!important;font-family:"Manrope",Arial,sans-serif!important;font-size:clamp(58px,8.2vw,116px)!important;font-weight:600!important;line-height:.98!important;letter-spacing:-.075em!important;text-transform:none!important;color:#f7f8fb!important}
+body.about-page .about-hero h1 em{display:inline-block;margin-top:7px;font-family:"Bodoni Moda","Playfair Display",Georgia,serif!important;font-size:1.02em!important;font-style:italic!important;font-weight:600!important;letter-spacing:-.055em!important;line-height:1.04!important;color:#e3b64f!important}
+body.about-page .about-hero-content>p:last-of-type{margin-top:25px!important;font-family:"DM Sans",Arial,sans-serif!important;font-size:clamp(14px,1.3vw,18px)!important;font-weight:600!important;letter-spacing:.12em!important;color:#f0e8d7!important}
+body.about-page :is(.about-section-title h2,.about-quality-copy h2,.about-end h2){font-family:"Manrope",Arial,sans-serif!important;font-weight:800!important;letter-spacing:-.055em!important;line-height:1.12!important}
+body.about-page .about-profile-copy h3,body.about-page .about-pillar h3,body.about-page .about-person-copy h3,body.about-page .about-commit h3{font-family:"Manrope",Arial,sans-serif!important;font-weight:800!important;letter-spacing:-.035em!important}
+@media(max-width:700px){body.about-page .about-hero h1{font-size:clamp(43px,11.5vw,68px)!important;line-height:1.02!important;letter-spacing:-.07em!important}body.about-page .about-hero h1 em{margin-top:4px!important;font-size:1em!important;line-height:1.05!important}body.about-page .about-hero-content>p:last-of-type{margin-top:18px!important;letter-spacing:.08em!important}}
