@@ -2213,3 +2213,36 @@ body.premium-site .portfolio-image-card figcaption span{
 .about-hero-image{background-image:url('about-hero.svg')!important;background-size:cover;background-position:center}
 .about-profile-visual{background:#e8dfcf}
 .about-profile-visual img{object-fit:cover;object-position:center}
+
+
+/* HOMEPAGE — alternating navy blue and clean white sections */
+body.premium-site .welcome-band{background:#0b1d38!important;color:#fff!important;border-top:1px solid rgba(227,201,143,.28);border-bottom:1px solid rgba(227,201,143,.28)}
+body.premium-site .welcome-band h2{color:#fff!important}body.premium-site .welcome-band span{color:#e3c98f!important}body.premium-site .welcome-band p{color:#d9e1eb!important}
+body.premium-site .intro{background:#f7f8fa!important;color:#102344!important}
+body.premium-site .intro h2,body.premium-site .intro .lead,body.premium-site .intro-copy p{color:#102344!important}
+body.premium-site .intro-copy p:not(.lead){color:#526176!important}body.premium-site .intro .under-link{color:#9a793f!important}
+body.premium-site .values-strip>div{border-color:rgba(16,35,68,.15)!important}body.premium-site .values-strip strong{color:#b18b4d!important}body.premium-site .values-strip span{color:#263a56!important}
+body.premium-site .why-samsen{background:#0b1d38!important;color:#fff!important}
+body.premium-site .why-samsen .why-bg-overlay{background:linear-gradient(120deg,rgba(7,20,43,.97),rgba(11,29,56,.91))!important}
+body.premium-site .why-cinematic-heading>p:not(.eyebrow){color:#d9e1eb!important}body.premium-site .why-cinematic-card{background:rgba(255,255,255,.055)!important}body.premium-site .why-cinematic-copy p{color:#e0e5ec!important}
+body.premium-site .services{background:#f7f8fa!important;color:#102344!important}
+body.premium-site .services .section-heading h2{color:#102344!important}body.premium-site .services .section-heading .eyebrow{color:#9a793f!important}body.premium-site .services .section-note{color:#526176!important}
+body.premium-site .service-card{background:#fff!important;color:#102344!important;border:1px solid rgba(177,139,77,.48)!important;box-shadow:0 8px 24px rgba(16,35,68,.055)!important}
+body.premium-site .service-card h3{color:#102344!important}body.premium-site .service-card p{color:#526176!important}body.premium-site .service-card .service-no,body.premium-site .service-card .service-link{color:#a27f43!important}
+body.premium-site .projects{background:#0b1d38!important;color:#fff!important}
+body.premium-site .projects .section-heading h2{color:#fff!important}body.premium-site .projects .section-note{color:#d9e1eb!important}
+body.premium-site .project-preview-grid article{background:rgba(255,255,255,.045)!important;border:1px solid rgba(227,201,143,.48)!important;color:#fff!important}
+body.premium-site .project-preview-grid article h3{color:#fff!important}body.premium-site .project-preview-grid article p{color:#d9e1eb!important}body.premium-site .project-preview-grid article>span{color:#e3c98f!important}
+body.premium-site .scroll-story{background:#f7f8fa!important;color:#102344!important}
+body.premium-site .story-heading h2,body.premium-site .story-step h3{color:#102344!important}
+body.premium-site .story-heading>p:not(.eyebrow),body.premium-site .story-step p:not(.story-kicker){color:#526176!important}
+body.premium-site .story-step{border-color:rgba(16,35,68,.16)!important}body.premium-site .story-step>span{color:#a27f43!important}
+body.premium-site .statement{background:linear-gradient(115deg,#07142b,#10294a)!important;color:#fff!important}
+body.premium-site .statement h2,body.premium-site .statement p:not(.eyebrow){color:#fff!important}body.premium-site .statement h2 em{color:#e3c98f!important}
+body.premium-site .contact{background:#f7f8fa!important;color:#102344!important}
+body.premium-site .contact h2{color:#102344!important}body.premium-site .contact .contact-copy{color:#526176!important}
+body.premium-site .contact-panel{background:#0b1d38!important;color:#fff!important;border:1px solid rgba(227,201,143,.55)!important}
+body.premium-site .contact-panel h3{color:#fff!important}body.premium-site .contact-panel p,body.premium-site .contact-method a{color:#e5eaf1!important}
+body.premium-site .contact-method>span,body.premium-site .panel-kicker{color:#e3c98f!important}
+body.premium-site .samsen-stats-band{background:#0b1d38!important;color:#fff!important;border-top:1px solid rgba(227,201,143,.25)}
+body.premium-site .samsen-stats-intro strong{color:#fff!important}body.premium-site .samsen-stats-intro em,body.premium-site .samsen-stat-number,body.premium-site .samsen-stat-icon{color:#e3c98f!important}body.premium-site .samsen-stat-label{color:#e1e7ef!important}
