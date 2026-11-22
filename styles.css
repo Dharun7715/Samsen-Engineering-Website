@@ -2527,3 +2527,50 @@ body.about-page .about-hero-title .about-title-accent em{display:inline-block}
 @media(max-width:700px){
  body.about-page .about-hero-title .about-title-line{width:100%;transform:translate3d(0,26px,0)}
 }
+
+
+/* PROJECTS + CONTACT + MOTION — responsive premium finish */
+body.projects-page .samsen-project-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:38px}
+body.projects-page .samsen-project-card{position:relative;display:flex;flex-direction:column;min-width:0;padding:30px 30px 28px;background:linear-gradient(145deg,#102746 0%,#08172e 100%);border:1px solid rgba(227,201,143,.42);border-radius:4px;overflow:hidden;box-shadow:0 16px 38px rgba(7,20,43,.10);transition:transform .45s cubic-bezier(.2,.7,.2,1),border-color .35s ease,box-shadow .35s ease}
+body.projects-page .samsen-project-card:before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(180deg,#ead7aa,#b58b45);opacity:.9}
+body.projects-page .samsen-project-card:hover{transform:translateY(-5px);border-color:rgba(234,215,170,.78);box-shadow:0 22px 46px rgba(7,20,43,.17)}
+body.projects-page .samsen-project-index{display:flex;align-items:center;gap:12px;margin-bottom:20px;color:#ead7aa;font:700 11px 'Manrope',sans-serif;letter-spacing:.16em}
+body.projects-page .samsen-project-index span{color:#b9c5d5;font-size:9px;letter-spacing:.18em}
+body.projects-page .samsen-project-content h2{min-height:2.4em;margin:0 0 22px;color:#f5f7fb;font:700 clamp(17px,1.55vw,22px)/1.25 'Manrope',sans-serif;letter-spacing:-.035em}
+body.projects-page .samsen-project-content table{width:100%;border-collapse:collapse;color:#e4eaf2;font-size:13px;line-height:1.6}
+body.projects-page .samsen-project-content th,body.projects-page .samsen-project-content td{padding:12px 10px;border-top:1px solid rgba(227,201,143,.18);text-align:left;vertical-align:top}
+body.projects-page .samsen-project-content th{width:42%;color:#e3c98f;font-weight:600}
+body.projects-page .samsen-project-content td{color:#e8edf4}
+body.projects-page .samsen-project-wide{grid-column:1/-1}
+body.projects-page .samsen-project-wide .samsen-project-content{max-width:900px}
+body.projects-page .portfolio-heading{max-width:760px}
+body.projects-page .samsen-project-intro{color:#617086;line-height:1.8}
+body.projects-page .samsen-project-card[data-reveal]{opacity:0;transform:translateY(28px)}
+body.projects-page .samsen-project-card[data-reveal].is-visible{opacity:1;transform:translateY(0)}
+/* Contact form */
+body.premium-site .samsen-enquiry-form{display:grid;gap:14px;margin-top:26px;padding-top:22px;border-top:1px solid rgba(227,201,143,.22)}
+body.premium-site .enquiry-form-heading>span{color:#e3c98f;font:800 9px 'Manrope',sans-serif;letter-spacing:.19em}
+body.premium-site .enquiry-form-heading p{margin:6px 0 2px!important;color:#c4cfdd!important;font-size:12px;line-height:1.6}
+body.premium-site .samsen-enquiry-form label{display:grid;gap:7px;color:#e7edf5;font-size:11px;font-weight:700;letter-spacing:.04em}
+body.premium-site .samsen-enquiry-form input,body.premium-site .samsen-enquiry-form select,body.premium-site .samsen-enquiry-form textarea{width:100%;min-width:0;border:1px solid rgba(227,201,143,.28);border-radius:2px;background:rgba(255,255,255,.055);padding:12px 13px;color:#fff;font:500 13px 'DM Sans',sans-serif;outline:none}
+body.premium-site .samsen-enquiry-form select option{color:#17243a}
+body.premium-site .samsen-enquiry-form textarea{resize:vertical;min-height:86px}
+body.premium-site .samsen-enquiry-form :is(input,select,textarea):focus{border-color:#e3c98f;box-shadow:0 0 0 3px rgba(227,201,143,.12)}
+body.premium-site .samsen-enquiry-form input::placeholder,body.premium-site .samsen-enquiry-form textarea::placeholder{color:#9eacbf}
+body.premium-site .enquiry-submit{width:100%;justify-content:center;border:0;cursor:pointer}
+body.premium-site .enquiry-note{margin:0!important;color:#9eacbf!important;font-size:10px!important;line-height:1.6}
+/* Consistent scroll reveals for selected major content blocks */
+[data-reveal]{transition:opacity .72s ease,transform .72s cubic-bezier(.2,.7,.2,1)}
+[data-reveal].is-visible{opacity:1!important;transform:translateY(0)!important}
+@media(max-width:760px){
+ body.projects-page .samsen-project-list{grid-template-columns:1fr;gap:15px}
+ body.projects-page .samsen-project-card{padding:24px 20px}
+ body.projects-page .samsen-project-content h2{min-height:0;font-size:18px}
+ body.projects-page .samsen-project-wide{grid-column:auto}
+ body.projects-page .samsen-project-content th,body.projects-page .samsen-project-content td{padding:10px 8px;font-size:12px;overflow-wrap:anywhere}
+ body.premium-site .samsen-enquiry-form{gap:12px}
+ body.premium-site .samsen-enquiry-form input,body.premium-site .samsen-enquiry-form select,body.premium-site .samsen-enquiry-form textarea{font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){
+ [data-reveal],body.projects-page .samsen-project-card{transition:none!important;transform:none!important;opacity:1!important}
+}
