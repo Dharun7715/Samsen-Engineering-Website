@@ -2627,3 +2627,21 @@ body.projects-page .samsen-project-card:hover{transform:translateY(-2px);box-sha
 @media(prefers-reduced-motion:reduce){
   .hero-slider .slide:before,.hero-slider .slide-content,[data-reveal]{animation:none!important;transition:none!important}
 }
+
+/* ABOUT PROFILE — premium editorial two-column redesign */
+body.about-page .about-profile-redesign{background:#f7f3ec!important;background-image:radial-gradient(rgba(177,139,77,.10) .7px,transparent .7px)!important;background-size:18px 18px!important;position:relative;overflow:hidden}
+body.about-page .about-profile-redesign-title{margin-bottom:34px}
+body.about-page .about-profile-redesign-title h2{font-family:Georgia,serif!important;font-weight:700!important;letter-spacing:-.035em!important;color:#102344!important;font-size:clamp(28px,4vw,48px)!important}
+body.about-page .about-profile-redesign-grid{display:grid!important;grid-template-columns:minmax(300px,.78fr) minmax(0,1.42fr)!important;gap:clamp(28px,5vw,72px)!important;align-items:center!important}
+body.about-page .about-profile-redesign-visual{position:relative!important;margin:0!important;min-height:560px!important;overflow:hidden!important;border:1px solid #c7a15c!important;border-radius:10px!important;box-shadow:0 18px 36px rgba(48,34,15,.16)!important;background:#d8c9aa!important}
+body.about-page .about-profile-redesign-visual img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
+body.about-page .about-profile-redesign-visual:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(5,19,39,.9));pointer-events:none}
+body.about-page .about-profile-redesign-visual figcaption{position:absolute!important;z-index:2!important;left:28px!important;right:22px!important;bottom:30px!important;display:grid!important;gap:9px!important;color:#fff!important}
+body.about-page .about-profile-redesign-visual figcaption span{font-size:10px!important;letter-spacing:2px!important;color:#f0d08d!important}
+body.about-page .about-profile-redesign-visual figcaption strong{font:italic 600 26px Georgia,serif!important;color:#fff!important}
+body.about-page .about-profile-redesign-copy h3{font:700 clamp(22px,2.3vw,30px) Manrope,sans-serif!important;color:#102344!important;margin:0 0 14px!important}
+body.about-page .about-gold-rule{display:block;width:62px;height:3px;background:#c99e4e;margin:0 0 25px}
+body.about-page .about-profile-redesign-copy p{font-size:clamp(13px,1.05vw,16px)!important;line-height:1.8!important;color:#30425c!important;margin:0 0 15px!important}
+body.about-page .about-profile-redesign .about-commit{margin-top:44px!important;background:rgba(255,255,255,.78)!important}
+@media(max-width:900px){body.about-page .about-profile-redesign-grid{grid-template-columns:1fr!important}body.about-page .about-profile-redesign-visual{min-height:420px!important}}
+@media(max-width:600px){body.about-page .about-profile-redesign{padding-top:58px!important;padding-bottom:58px!important}body.about-page .about-profile-redesign-title h2{font-size:clamp(26px,8vw,36px)!important}body.about-page .about-profile-redesign-visual{min-height:390px!important}body.about-page .about-profile-redesign-visual figcaption{left:18px!important;bottom:20px!important}body.about-page .about-profile-redesign-visual figcaption strong{font-size:22px!important}}
