@@ -22,6 +22,6 @@
 <text x="320" y="438" text-anchor="middle" fill="#18304a" font-family="Arial,sans-serif" font-size="18" font-weight="800" letter-spacing="5">ASSURANCE</text>
 <g fill="#b38335"><circle cx="132" cy="310" r="13"/><circle cx="508" cy="310" r="13"/></g>
 <g fill="none" stroke="#b38335" stroke-width="3" stroke-linecap="round"><path d="M151 414q-22 28-12 57m12-57q-1 23 18 32m-21-15q-21 3-29 21m19-35q-18-3-27-17"/><path d="M489 414q22 28 12 57m-12-57q1 23-18 32m21-15q21 3 29 21m-19-35q18-3 27-17"/></g>
-<text x="320" y="530" text-anchor="middle" fill="#142943" font-family="Arial,sans-serif" font-size="14" font-weight="800" letter-spacing="4">BUILT ON TRUST · DELIVERED WITH CARE</text>
+
 <circle cx="320" cy="310" r="272" fill="none" stroke="#fff8e4" stroke-width="2"/>
 </svg>
