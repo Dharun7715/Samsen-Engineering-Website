@@ -2149,3 +2149,62 @@ body.premium-site .portfolio-image-card figcaption span{
 .samsen-project-wide{grid-column:1/-1}
 .samsen-project-wide .samsen-project-content table{max-width:850px}
 @media(max-width:760px){.samsen-project-list{grid-template-columns:1fr;gap:16px}.samsen-project-card{grid-template-columns:48px minmax(0,1fr);gap:12px;padding:22px 16px}.samsen-project-index{font-size:21px}.samsen-project-content h2{font-size:16px}.samsen-project-content table{font-size:12px}.samsen-project-content th,.samsen-project-content td{padding:9px 8px}.samsen-project-wide{grid-column:auto}}
+
+
+/* ABOUT US — cinematic editorial profile */
+.about-hero{position:relative;min-height:590px;display:flex;align-items:center;overflow:hidden;background:#07142b}
+.about-hero-image{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2000&q=85');background-size:cover;background-position:center 48%;transform:scale(1.02)}
+.about-hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,16,35,.94),rgba(5,16,35,.72) 52%,rgba(5,16,35,.25))}
+.about-hero-content{position:relative;z-index:1;padding-top:90px;padding-bottom:90px}
+.about-hero h1{font-family:Manrope,sans-serif;font-size:clamp(38px,6vw,76px);line-height:1.04;letter-spacing:-2.8px;color:#fff;margin:24px 0}
+.about-hero h1 em,.about-end h2 em{font-style:normal;color:#e3c98f}
+.about-hero-content>p:last-of-type{font-size:17px;letter-spacing:2px;color:#e8e5dc}
+.about-hero-rule{display:flex;gap:24px;margin-top:55px;padding-top:18px;border-top:1px solid rgba(227,201,143,.55);color:#ead7aa;font-size:10px;letter-spacing:2px;font-weight:700}
+.about-profile{background:#f7f6f2;color:#142642}
+.about-section-title{margin-bottom:34px}
+.about-section-title h2{font-family:Manrope,sans-serif;color:#102344;font-size:clamp(26px,3vw,38px);line-height:1.2;margin:10px 0}
+.about-profile-grid{display:grid;grid-template-columns:minmax(280px,.82fr) minmax(0,1.45fr);gap:58px;align-items:center}
+.about-profile-visual{position:relative;min-height:520px;overflow:hidden;border-radius:4px;border:1px solid rgba(227,201,143,.7);background:#ddd}
+.about-profile-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.about-image-caption{position:absolute;bottom:0;left:0;right:0;padding:22px;background:linear-gradient(transparent,rgba(5,16,35,.9));color:#fff;display:grid;gap:6px}
+.about-image-caption span{font-size:10px;letter-spacing:2px;color:#ead7aa}.about-image-caption strong{font-family:Manrope,sans-serif;font-size:19px}
+.about-profile-copy h3{font-family:Manrope,sans-serif;font-size:23px;color:#102344;margin:0 0 16px}
+.about-profile-copy p,.about-quality-copy p,.about-person-copy p{font-size:15px;line-height:1.85;color:#39465a;margin:0 0 15px}
+.about-commit{display:flex;align-items:center;gap:25px;margin-top:62px;padding:28px 32px;border-top:1px solid #d8c59a;border-bottom:1px solid #d8c59a;background:#fff}
+.about-commit-mark{width:58px;height:58px;flex:0 0 58px;border:1px solid #d7bd82;border-radius:50%;display:grid;place-items:center;color:#b39352;font-family:Manrope,sans-serif;font-size:30px;font-weight:800}
+.about-commit h3{font-family:Manrope,sans-serif;color:#102344;font-size:20px;margin:0 0 8px}
+.about-commit p{font-size:13px;line-height:1.8;letter-spacing:.35px;color:#354158;margin:0}
+.about-pillars{background:#091a34;color:#fff}
+.about-pillar-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.about-pillar{padding:32px 22px;min-height:265px;text-align:center;border:1px solid rgba(227,201,143,.45);background:rgba(255,255,255,.025)}
+.about-pillar-icon{display:block;color:#e3c98f;font-size:25px;margin-bottom:15px}
+.about-pillar h3{font-family:Manrope,sans-serif;font-size:19px;color:#ead7aa;margin:0 0 18px}
+.about-pillar p,.about-pillar li{font-size:12px;line-height:1.9;color:#e8e8e5;letter-spacing:.35px}
+.about-pillar ul{padding:0;margin:0;list-style:none}.about-pillar li:before{content:"✦ ";color:#e3c98f}
+.about-quality{background:#f7f6f2;color:#142642}
+.about-quality-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);gap:50px;align-items:center}
+.about-quality-copy h2{font-family:Manrope,sans-serif;color:#102344;font-size:34px;margin:8px 0 16px}
+.about-quality-copy ul{list-style:none;padding:0;margin:18px 0 0}
+.about-quality-copy li{position:relative;padding-left:22px;margin:10px 0;color:#39465a;font-size:14px;line-height:1.75}
+.about-quality-copy li:before{content:"✦";position:absolute;left:0;color:#b39352}
+.quality-seal{display:flex;justify-content:center;align-items:center;padding:25px}
+.seal-outer{width:min(300px,70vw);aspect-ratio:1;border-radius:50%;padding:13px;background:radial-gradient(circle,#fff2c7 0 44%,#c59a45 45% 53%,#f4df9d 54% 63%,#98702e 64% 70%,#e3c98f 71%);display:grid;place-items:center;box-shadow:0 12px 30px rgba(21,34,52,.12)}
+.seal-inner{width:100%;height:100%;border:2px solid #6d552b;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#12213a;background:radial-gradient(circle,#fff5d7,#e9c878);font-family:Manrope,sans-serif}
+.seal-top,.seal-bottom{font-weight:800;letter-spacing:2px;font-size:clamp(11px,1.3vw,15px)}
+.seal-inner strong{font-size:clamp(38px,5vw,58px);line-height:1.1}
+.seal-stars{font-size:18px;color:#a87925;letter-spacing:5px;margin:6px 0}
+.about-team{background:#091a34;color:#fff}
+.about-team .about-section-title h2{color:#fff}
+.about-team-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.about-person{display:grid;grid-template-columns:155px minmax(0,1fr);gap:22px;padding:25px;background:rgba(255,255,255,.035);border:1px solid rgba(227,201,143,.45)}
+.about-person-art{min-height:210px;background:linear-gradient(145deg,#1b3457,#0c1b32);border:1px solid rgba(227,201,143,.3);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px}
+.about-person-art span{width:86px;height:86px;border-radius:50%;border:1px solid #e3c98f;display:grid;place-items:center;font-family:Manrope,sans-serif;font-size:30px;color:#ead7aa}
+.about-person-art small{font-size:9px;letter-spacing:2px;color:#e3c98f}
+.about-person-copy h3{font-family:Manrope,sans-serif;font-size:21px;color:#ead7aa;margin:0 0 5px}
+.about-person-copy h4{font-size:13px;line-height:1.5;color:#fff;margin:0 0 13px}
+.about-person-copy p{font-size:13px;color:#d7dce5;line-height:1.75}
+.about-person-copy ul{padding-left:18px;color:#d7dce5;font-size:13px;line-height:1.9}
+.about-end{background:linear-gradient(110deg,#07142b,#142c4d);padding:90px 0;color:#fff;text-align:center}
+.about-end h2{font-family:Manrope,sans-serif;font-size:clamp(32px,5vw,56px);line-height:1.1;margin:18px 0 30px}
+@media(max-width:900px){.about-profile-grid{grid-template-columns:1fr;gap:30px}.about-profile-visual{min-height:360px}.about-pillar-grid{grid-template-columns:repeat(2,1fr)}.about-quality-grid{grid-template-columns:1fr}.about-team-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.about-hero{min-height:500px}.about-hero h1{letter-spacing:-1.5px}.about-hero-rule{margin-top:35px}.about-pillar-grid{grid-template-columns:1fr}.about-pillar{min-height:auto}.about-person{grid-template-columns:1fr}.about-person-art{min-height:150px}.about-commit{padding:22px 16px;align-items:flex-start}.about-commit p{font-size:11px}.about-quality-copy h2{font-size:28px}}
