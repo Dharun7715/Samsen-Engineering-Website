@@ -2501,3 +2501,29 @@ body.about-page .about-hero h1 em{
   letter-spacing:-.055em!important;
   color:#e7b94f!important;
 }
+
+
+/* ABOUT HERO TITLE — staggered cinematic slide-in */
+body.about-page .about-hero-title{overflow:visible!important}
+body.about-page .about-hero-title .about-title-line{
+ display:block;
+ width:fit-content;
+ max-width:100%;
+ opacity:0;
+ transform:translate3d(0,42px,0);
+ animation:aboutTitleSlideIn .95s cubic-bezier(.2,.72,.2,1) forwards;
+ will-change:transform,opacity;
+}
+body.about-page .about-hero-title .about-title-main{animation-delay:.12s}
+body.about-page .about-hero-title .about-title-accent{animation-delay:.34s}
+body.about-page .about-hero-title .about-title-accent em{display:inline-block}
+@keyframes aboutTitleSlideIn{
+ 0%{opacity:0;transform:translate3d(0,42px,0)}
+ 100%{opacity:1;transform:translate3d(0,0,0)}
+}
+@media(prefers-reduced-motion:reduce){
+ body.about-page .about-hero-title .about-title-line{animation:none!important;opacity:1!important;transform:none!important}
+}
+@media(max-width:700px){
+ body.about-page .about-hero-title .about-title-line{width:100%;transform:translate3d(0,26px,0)}
+}
