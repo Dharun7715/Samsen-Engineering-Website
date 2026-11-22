@@ -2451,3 +2451,12 @@ body.about-page .quality-seal-caption{position:static!important;display:block!im
  body.about-page .quality-seal-frame{width:min(100%,340px)!important;max-width:340px!important}
  body.about-page .quality-seal-caption{margin-top:9px!important;font-size:9px!important;letter-spacing:1.45px!important;line-height:1.65!important}
 }
+
+
+/* ABOUT HERO — preserve original heading scale; typography style only */
+body.about-page .about-hero h1{font-size:clamp(38px,6vw,76px)!important;line-height:1.04!important;letter-spacing:-.045em!important}
+body.about-page .about-hero h1 em{font-size:1em!important;line-height:1.05!important;letter-spacing:-.045em!important;margin-top:4px!important}
+@media(max-width:700px){
+ body.about-page .about-hero h1{font-size:clamp(30px,8vw,46px)!important;line-height:1.06!important;letter-spacing:-.04em!important}
+ body.about-page .about-hero h1 em{font-size:1em!important;line-height:1.08!important}
+}
