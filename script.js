@@ -283,3 +283,33 @@ function escapeHtml(value) {
   if(event.key==='Escape')hide();if(event.key==='ArrowLeft')move(-1);if(event.key==='ArrowRight')move(1);
  });
 })();
+
+
+/* Accessible reveal motion for project and contact content */
+(() => {
+ const targets=[...document.querySelectorAll('[data-reveal]')];
+ if(!targets.length)return;
+ if(!('IntersectionObserver'in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){targets.forEach(el=>el.classList.add('is-visible'));return;}
+ const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}});
+ },{threshold:.12,rootMargin:'0px 0px -35px 0px'});
+ targets.forEach((el,index)=>{el.style.transitionDelay=Math.min(index%4,3)*85+'ms';observer.observe(el);});
+})();
+
+/* Enquiry form prepares an email; no personal details are stored on this site. */
+(() => {
+ const form=document.querySelector('#samsenEnquiryForm');
+ if(!form)return;
+ form.addEventListener('submit',event=>{
+  event.preventDefault();
+  if(!form.reportValidity())return;
+  const data=new FormData(form);
+  const name=String(data.get('name')||'').trim();
+  const phone=String(data.get('phone')||'').trim();
+  const service=String(data.get('service')||'').trim();
+  const message=String(data.get('message')||'').trim();
+  const subject=encodeURIComponent('Project enquiry — '+service);
+  const body=encodeURIComponent('Name: '+name+'\nPhone: '+phone+'\nService: '+service+'\n\nProject details:\n'+(message||'Not provided'));
+  window.location.href='mailto:samsenengg@gmail.com?subject='+subject+'&body='+body;
+ });
+})();
