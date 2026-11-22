@@ -2485,3 +2485,19 @@ body.about-page .about-hero h1 em{
   body.about-page .about-hero h1{font-size:clamp(30px,8vw,46px)!important;line-height:1.06!important;letter-spacing:-.045em!important}
   body.about-page .about-hero h1 em{font-size:1em!important;line-height:1.08!important}
 }
+
+
+/* ABOUT HERO — closer to the supplied light sans / refined italic serif reference */
+body.about-page .about-hero h1{
+  font-family:"Manrope",Arial,sans-serif!important;
+  font-weight:400!important;
+  letter-spacing:-.065em!important;
+  text-transform:none!important;
+}
+body.about-page .about-hero h1 em{
+  font-family:"Bodoni Moda",Georgia,serif!important;
+  font-style:italic!important;
+  font-weight:500!important;
+  letter-spacing:-.055em!important;
+  color:#e7b94f!important;
+}
